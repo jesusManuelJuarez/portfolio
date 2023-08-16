@@ -11,7 +11,7 @@ header {
   background-color: #333;
   color: #fff;
   text-align: center;
-  padding: 1rem 0;
+  padding: 1rem 0.5rem;
   position: fixed;
   top: 0;
   left: 0;
@@ -76,6 +76,7 @@ main {
 
 .btn:hover {
   background-color: #555;
+  color: #fff; /* Mantén el color blanco incluso al pasar el mouse sobre el botón */
 }
 
 
@@ -123,3 +124,25 @@ main {
   max-width: 100%;
   max-height: 80vh;
 }
+
+/* Estilo para los hipervínculos normales */
+/* Estilo para los hipervínculos normales */
+/* Estilo para los hipervínculos normales */
+a {
+  color: #007bff; /* Cambia el color a azul o el color que prefieras */
+  text-decoration: none; /* Quita el subrayado por defecto */
+}
+
+/* Estilo para los hipervínculos cuando están siendo "hovered" (cuando el mouse pasa por encima) */
+a:hover {
+  color: #0056b3; /* Cambia el color a un tono más oscuro o el color que prefieras */
+}
+
+/* Estilo para los hipervínculos en los botones */
+.btn a {
+  color: #fff; /* Cambia el color a blanco para que sea visible en los botones */
+}
+
+
+
+
