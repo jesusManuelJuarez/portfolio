@@ -1,44 +1,65 @@
-/* En tu archivo styles.css */
-
+/* Estilos generales */
 body {
-     font-family: Arial, sans-serif;
-     margin: 0;
-     padding: 0;
-     background-color: #f5f5f5;
-   }
-   
-   header {
-     background-color: #333;
-     color: #fff;
-     text-align: center;
-     padding: 1rem 0;
-     position: fixed;
-     top: 0;
-     left: 0;
-     width: 100%;
-     z-index: 1000;
-   }
-   
-   main {
-     display: flex;
-     flex-wrap: wrap;
-     justify-content: center;
-     padding: 2rem;
-     margin-top: 60px; /* margen para separar del encabezado fijo */
-   }
-   
-/* Agrega estos estilos al archivo styles.css */
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+}
+
+/* Encabezado fijo */
+header {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 1rem 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: background-color 0.3s ease; /* Agrega una transición para un cambio suave */
+}
+
+header.transparent {
+  background-color: rgba(51, 51, 51, 0.7); /* Cambia el color a uno transparente */
+}
+
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #333; /* Cambia el color de fondo a gris */
+  color: #fff; /* Cambia el color del texto a blanco */
+}
+
+/* Contenido principal */
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 2rem;
+  margin-top: 60px;
+}
+
+/* Estilos de los proyectos */
 .project {
   position: relative;
   background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
   margin: 1rem;
   padding: 1rem;
-  width: 300px;
-  height: 425px; /* Ajusta esta altura según tus preferencias */
+  width: 325px;
+  height: 500px;
+  transition: transform 0.3s ease;
+  overflow: hidden; /* Evita que los detalles se salgan del proyecto */
 }
 
+.project:hover {
+  transform: translateY(-5px);
+}
+
+/* Botón de detalles */
 .btn {
   position: absolute;
   bottom: 10px;
@@ -50,73 +71,55 @@ body {
   text-decoration: none;
   border-radius: 4px;
   transition: background-color 0.3s ease;
+  z-index: 2;
 }
 
-/* Resto de tus estilos... */
+.btn:hover {
+  background-color: #555;
+}
 
-   .btn:hover {
-     background-color: #555;
-   }
-   
-   footer {
-     text-align: center;
-     padding: 1rem;
-     background-color: #333;
-     color: #fff;
-   }
 
-/* Agrega estilos al botón de cierre */
-.close-button {
-     background-color: rgba(71, 71, 156, 0.952);
-     color: white;
-     border: none;
-     border-radius: 10px;
-     padding: 5px 10px;
-     cursor: pointer;
-     float: right; /* Alinea el botón hacia la derecha */
-     clear: both; /* Limpia el float */
-   }
-   
-/* estos estilos al archivo styles.css */
+
+/* Detalles emergentes */
 .details {
-     display: none;
-     position: fixed;
-     top: 0;
-     left: 0;
-     width: 100%;
-     height: 100%;
-     
-     z-index: 1000;
-     color: #fff;
-     overflow-y: auto;
-   }
-   
-   .project.active .details {
-     display: block;
-   }
-   
-   .project.active .details .project-content {
-     display: flex;
-     align-items: center;
-     justify-content: space-around;
-   }
-   
-   .project.active .details .description {
-     width: 60%;
-     background-color: rgba(0, 0, 0, 0.7);
-     padding: 2rem;
-     color: white;
-   }
-   
-   .project.active .details .screenshot {
-     width: 60%;
-     background-color: rgba(0, 0, 0, 0.7);
-     padding: 2rem;
-     text-align: center;
-   }
-   
-   .project.active .details .screenshot img {
-     max-width: 100%;
-     max-height: 80vh;
-   }
-   
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 2rem;
+  color: white;
+  overflow-y: auto;
+  z-index: 1;
+}
+
+.project.active .details {
+  display: block;
+}
+
+.project.active .details .project-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.project.active .details .description {
+  width: 60%;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 2rem;
+  color: white;
+}
+
+.project.active .details .screenshot {
+  width: 60%;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 2rem;
+  text-align: center;
+}
+
+.project.active .details .screenshot img {
+  max-width: 100%;
+  max-height: 80vh;
+}
