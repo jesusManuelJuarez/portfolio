@@ -1,186 +1,150 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mi Portafolio</title>
-<link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio de Jesús Manuel Juarez</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-<header>
-  <h1>My portfolio</h1>
-</header>
-<main>
+    <header class="hero">
+        <div class="hero-content">
+            <h1><i class="fas fa-code"></i> JESÚS MANUEL JUÁREZ ACOSTA</h1>
+            <h2>Ingeniería en Software</h2>
+            <p>Egresado de ingeniería en software con plan académico finalizado, título aún en trámite. Dedicado y con pasión por aportar mis habilidades con calidad y profesionalismo de forma eficaz y escalable.</p>
+            <div class="social-links">
+                <a href="https://github.com/jesusManuelJuarez" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/jesús-manuel-juárez-acosta-2a702b180" target="_blank"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </header>
 
-  <section class="project">
-    <h2>SafeApp</h2>
-    <img src="https://i.postimg.cc/YC2nqJPV/portfolio.webp" alt="Proyecto 0">
-    <a href="#" class="btn">Ver Detalles</a>
-    <div class="details">
-      <div class="description">
-        <ul>
-          <li>Koltlin</li>
-          <li>Java</li>
-          <li>SDK Android</li>
-          <!-- Agrega más elementos de la lista aquí -->
-        </ul>
-        <p>Con SafeApp olvídate de recordar tus contraseñas, SafeApp lo hace por ti.</p>
-        <p><a href="https://play.google.com/store/apps/details?id=com.Acorex.safeapp" target="_blank">Ver en play store</a></p>
-        <p><a href="Github privado" target="_blank" >Ver repositorio en Git Hub</a></p>
-        <!-- Cambio de botón Ver Detalles a Ver Menos -->
-      </div>
-      <div class="screenshot">
-        <img src="https://i.postimg.cc/SsSw0nhX/screen-one.jpg" alt="Captura de pantalla">
-      </div>
-    </div>
-  </section>
+    <section id="about" class="section">
+        <div class="container">
+            <h2><i class="fas fa-user"></i> Sobre mí</h2>
+            <div class="about-content">
+                <div class="profile">
+                    <img src="assets/mi.webp" alt="Perfil">
+                </div>
+                <div class="bio">
+                    <p>Egresado de ingeniería en software con plan académico finalizado, título aún en trámite. Dedicado y con pasión por aportar mis habilidades con calidad y profesionalismo de forma eficaz y escalable.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <section class="project">
-    <h2>FinderPymes</h2>
-    <img src="https://i.postimg.cc/T3ZdbrjT/banner-fp.png" alt="Proyecto 1">
-    <a href="#" class="btn">Ver Detalles</a>
-    <div class="details">
-      <div class="description">
-        <ul>
-          <li>Flutter</li>
-          <li>Dart</li>
-          <li>SDK Android</li>
-          <!-- Agrega más elementos de la lista aquí -->
-        </ul>
-        <p>FinderPymes (FPY) es una aplicación móvil diseñada para facilitar la conexión entre pequeñas y medianas empresas (Pymes) y consumidores finales...</p>
-        <p><a href="https://play.google.com/store/apps/details?id=com.aez.finderpymes" target="_blank">Ver en play store</a></p>
-        <p><a href="https://github.com/jesusManuelJuarez/FinderPymes" target="_blank" >Ver repositorio en Git Hub</a></p>
-        <!-- Cambio de botón Ver Detalles a Ver Menos -->
-      </div>
-      <div class="screenshot">
-        <img src="https://i.postimg.cc/xjW0kG9g/Screenshot-2023-08-15-10-13-51-365-com-aez-finderpymes.jpg" alt="Captura de pantalla">
-      </div>
-    </div>
-  </section>
+    <section id="skills" class="section">
+        <div class="container">
+            <h2><i class="fas fa-tools"></i> Habilidades</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <i class="fab fa-html5"></i>
+                    <h3>HTML5</h3>
+                    <p>Desarrollo de estructuras web semánticas y accesibles</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fab fa-css3-alt"></i>
+                    <h3>CSS3</h3>
+                    <p>Diseño responsivo y animaciones modernas</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fab fa-js"></i>
+                    <h3>JavaScript</h3>
+                    <p>Desarrollo de aplicaciones interactivas</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fab fa-flutter"></i>
+                    <h3>Flutter</h3>
+                    <p>Desarrollo multiplataforma</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-mobile-alt"></i>
+                    <h3>Kotlin</h3>
+                    <p>Desarrollo Android nativo</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fab fa-react"></i>
+                    <h3>React</h3>
+                    <p>Desarrollo de componentes reutilizables</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <section id="projects" class="section">
+        <div class="container">
+            <h2><i class="fas fa-project-diagram"></i> Proyectos</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-banner">
+                        <div class="project-banner-content">
+                            <h3>SafeApp</h3>
+                            <div class="tech-stack">
+                                <span class="tech-tag">Kotlin</span>
+                                <span class="tech-tag">Java</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <p>Aplicación de gestión de contraseñas</p>
+                        <div class="project-links">
+                            <a href="https://play.google.com/store/apps/details?id=com.Acorex.safeapp" target="_blank" class="project-link">
+                                <i class="fab fa-google-play"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-banner">
+                        <div class="project-banner-content">
+                            <h3>SafeApp - Políticas</h3>
+                            <div class="tech-stack">
+                                <span class="tech-tag">React</span>
+                                <span class="tech-tag">HTML</span>
+                                <span class="tech-tag">CSS</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <p>Página web de políticas de privacidad para SafeApp</p>
+                        <div class="project-links">
+                            <a href="https://lively-duckanoo-b6102f.netlify.app/" target="_blank" class="project-link">
+                                <i class="fas fa-globe"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <section id="contact" class="section">
+        <div class="container">
+            <h2><i class="fas fa-envelope"></i> Contacto</h2>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <p>+52 9321245763</p>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <p>manueljuarez.dev@gmail.com</p>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <p>Jorge Camacho Vidal, Calle 14, Pichucalco, Chiapas, México</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <section class="project">
-    <h2>Hanged</h2>
-    <img src="https://i.postimg.cc/CKbDs0vR/Screenshot-20230815-152344.png" alt="Proyecto 1">
-    <a href="#" class="btn">Ver Detalles</a>
-    <div class="details">
-      <div class="description">
-        <ul>
-          <li>Java</li>
-          <li>Kotlin</li>
-          <!-- Agrega más elementos de la lista aquí -->
-        </ul>
-        <p>
-          Ahorca México es un juego clásico de ahorcado que sirve como guía turística, sumérgete descubriendo ciudades increíbles y 
-          pueblos mágicos a lo largo y ancho de la república mexicana, por cada lugar desbloqueado podrás ver la ubicación de lugar, 
-          y así poder planificar un futuro viaje, buena suerte!
-          + Conoce lugares únicos</p>
-        <p><a href="https://play.google.com/store/apps/details?id=com.acorex.ahorcamexico&pli=1" target="_blank">Ver en play store</a></p>
-      </div>
-      <div class="screenshot">
-        <img src="https://i.postimg.cc/hjpX2tVt/captura-2.jpg" alt="Captura de pantalla">
-      </div>
-    </div>
-  </section>
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 - Jesús Manuel Juarez Acosta (dev)</p>
+        </div>
+    </footer>
 
-  <section class="project">
-    <h2>PostNow</h2>
-    <img src="https://i.postimg.cc/9QgRPMtX/Screenshot-2023-08-15-15-36-18-832-com-example-postnow.jpg" alt="Proyecto 1">
-    <a href="#" class="btn">Ver Detalles</a>
-    <div class="details">
-      <div class="description">
-        <ul>
-          <li>Flutter</li>
-          <li>Dart</li>
-          <li>SDK Android</li>
-          <!-- Agrega más elementos de la lista aquí -->
-        </ul>
-        <p>PostNow es una red social que permite la iteracion con diferentes cuentas creada para postear pdf además de ver poder
-          mostrar tu propia ubicación, la app esta construida en Flutter y no se encuentra en producción.
-        </p>
-        <p><a href="https://github.com/jesusManuelJuarez/post_now" target="_blank" >Ver repositorio en Git Hub</a></p>
-      </div>
-      <div class="screenshot">
-        <img src="https://i.postimg.cc/c4rNgLHB/Screenshot-2023-08-15-10-20-15-564-com-example-postnow.jpg" alt="Captura de pantalla">
-      </div>
-    </div>
-  </section>
-
-
-  <section class="project">
-    <h2>API GATEWAY</h2>
-    <img src="https://i.postimg.cc/jjzDpXY2/logo.png" alt="Proyecto 1">
-    <a href="#" class="btn">Ver Detalles</a>
-    <div class="details">
-      <div class="description">
-        <ul>
-          <li>Node.js</li>
-          <li>Gateway</li>
-          <!-- Agrega más elementos de la lista aquí -->
-        </ul>
-        <p>Este proyecto es una API GATEWAY, que funciona para gestionar el trafico de los diferentes microservicios con el fin
-          de proveer una interfaz unica y centralizada.
-        </p>
-        <p><a href="https://github.com/jesusManuelJuarez/api_gateway_fp" target="_blank" >Ver repositorio en Git Hub</a></p>
-      </div>
-    </div>
-  </section>
-
-  <section class="project">
-    <h2>API REST (MICROSERVICIO)</h2>
-    <img src="https://i.postimg.cc/Fz2Mj0C5/node-icon.png" alt="Proyecto 1">
-    <a href="#" class="btn">Ver Detalles</a>
-    <div class="details">
-      <div class="description">
-        <ul>
-          <li>Node.js</li>
-          <li>Express</li>
-          <li>TypeScript</li>
-          <li>Docker</li>
-          <li>Amazon EC2</li>
-          <!-- Agrega más elementos de la lista aquí -->
-        </ul>
-        <p>Este proyecto es una API REST con arquitectura hexagonal con el fin de mantener las mejores
-          practicas, Es un microservicio que permite bridar servicio a una App llamada FinderPymes, proveé
-          una estructura descentralizada con el fin de dar escalibilidad al proyecto.
-        </p>
-        <p><a href="https://github.com/jesusManuelJuarez/api_register_finderpymes" target="_blank" >Ver repositorio en Git Hub</a></p>
-      </div>
-      <div class="screenshot">
-        <img src="https://i.postimg.cc/XvkBm89L/Screenshot-20230711-061015.png" alt="Captura de pantalla">
-      </div>
-    </div>
-  </section>
-
-  <section class="project">
-    <h2>AGS Asignaturas (IA)</h2>
-    <img src="https://i.postimg.cc/QMtq27gP/muestra.png" alt="Proyecto 1">
-    <a href="#" class="btn">Ver Detalles</a>
-    <div class="details">
-      <div class="description">
-        <ul>
-          <li>Python</li>
-          <li>Streamlit</li>
-          <li>POO</li>
-        </ul>
-        <p>Este es un proyecto de inteligencia artificial el cual busca simular el comportamiento natural de la teoría
-          evolutiva, con el fin de encontrar al más apto dentro de un conjunto de asignaturas y ordenar en un numero limitado
-          de cuatrimestres con el fin de conbatir el rezago academico.
-        </p>
-        <p><a href="https://github.com/jesusManuelJuarez/AsignaturasAGSC3" target="_blank" >Ver repositorio en Git Hub</a></p>
-      </div>
-      <div class="screenshot">
-        <img src="https://i.postimg.cc/bvW14BwD/prueba-V2-dev-fix.png" alt="Captura de pantalla">
-      </div>
-    </div>
-  </section>
-
-
-</main>
-<footer>
-  <p>&copy; 2023 - Mi Portafolio Personal by Jesús Manuel Juarez Acosta (Acorex)</p>
-</footer>
-<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
