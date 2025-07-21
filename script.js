@@ -18,6 +18,7 @@ function initializeApp() {
     initSkillBars();
     initTypingEffect();
     initParticles();
+    initWhatsApp();
     
     // Configurar eventos
     setupEventListeners();
@@ -415,6 +416,54 @@ function initParticles() {
     
     // Crear partículas periódicamente
     setInterval(createParticle, 300);
+}
+
+// ===== WHATSAPP FUNCTIONALITY =====
+function initWhatsApp() {
+    const whatsappLinks = document.querySelectorAll('.whatsapp-link, #whatsappBtn');
+    const phoneNumber = '529321245763'; // Tu número sin espacios ni símbolos
+    const defaultMessage = '¡Hola! Me interesa conocer más sobre tus servicios de desarrollo. ¿Podríamos conversar?';
+    
+    whatsappLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            openWhatsApp(phoneNumber, defaultMessage);
+        });
+    });
+}
+
+function openWhatsApp(phoneNumber, message = '') {
+    const encodedMessage = encodeURIComponent(message);
+    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    
+    let whatsappUrl;
+    
+    if (isMobile) {
+        // Para dispositivos móviles - abre la app de WhatsApp
+        whatsappUrl = `whatsapp://send?phone=${phoneNumber}&text=${encodedMessage}`;
+    } else {
+        // Para escritorio - abre WhatsApp Web
+        whatsappUrl = `https://web.whatsapp.com/send?phone=${phoneNumber}&text=${encodedMessage}`;
+    }
+    
+    // Abrir WhatsApp
+    window.open(whatsappUrl, '_blank');
+    
+    // Fallback para dispositivos móviles si la app no está instalada
+    if (isMobile) {
+        setTimeout(() => {
+            // Si después de 2 segundos el usuario sigue en la página, 
+            // probablemente no tiene WhatsApp instalado, así que abrimos WhatsApp Web
+            const fallbackUrl = `https://web.whatsapp.com/send?phone=${phoneNumber}&text=${encodedMessage}`;
+            window.open(fallbackUrl, '_blank');
+        }, 2000);
+    }
+    
+    // Track del evento
+    trackEvent('WhatsApp_Click', { 
+        device: isMobile ? 'mobile' : 'desktop',
+        phone: phoneNumber 
+    });
 }
 
 // ===== EVENTOS ADICIONALES =====

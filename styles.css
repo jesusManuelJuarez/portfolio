@@ -1159,15 +1159,40 @@ body {
   margin-bottom: var(--spacing-xs);
 }
 
+.contact-actions {
+  display: flex;
+  gap: var(--spacing-sm);
+  flex-wrap: wrap;
+}
+
 .contact-link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-xs);
   color: var(--primary-color);
   text-decoration: none;
   font-size: 0.9rem;
-  transition: color var(--transition-normal);
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border: 1px solid var(--primary-color);
+  border-radius: var(--border-radius);
+  transition: all var(--transition-normal);
+  background: transparent;
 }
 
 .contact-link:hover {
-  color: var(--primary-dark);
+  color: white;
+  background: var(--primary-color);
+  transform: translateY(-2px);
+}
+
+.contact-link.whatsapp-link {
+  color: #25d366;
+  border-color: #25d366;
+}
+
+.contact-link.whatsapp-link:hover {
+  background: #25d366;
+  color: white;
 }
 
 .contact-cta {
