@@ -328,8 +328,9 @@ body {
 .scroll-to-top:hover {
   transform: translateY(-3px);
   box-shadow: var(--shadow-glow);
-}/
-* ===== HERO SECTION ===== */
+}
+
+/* ===== HERO SECTION ===== */
 .hero {
   min-height: 100vh;
   display: flex;
@@ -995,6 +996,14 @@ body {
 
 .project-card:hover .project-overlay {
   opacity: 1;
+}
+
+/* Make BonkGames project links always visible on mobile */
+@media (max-width: 768px) {
+  .project-card[data-category="web"]:has(img[alt="BonkGames"]) .project-overlay {
+    opacity: 1;
+    background: rgba(0, 0, 0, 0.6);
+  }
 }
 
 .project-links {
