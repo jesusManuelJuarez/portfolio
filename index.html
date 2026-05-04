@@ -1,182 +1,79 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jesús Manuel Juárez Acosta - Portafolio de Ingeniero en Software</title>
-    <meta name="description"
-        content="Portafolio de Jesús Manuel Juárez Acosta, Ingeniero en Software especializado en desarrollo web y móvil. Egresado con experiencia en HTML5, CSS3, JavaScript, Flutter, Kotlin y React.">
-    <meta name="keywords"
-        content="Jesús Manuel Juárez Acosta, portafolio, ingeniero software, desarrollador web, flutter, kotlin, react">
-    <meta name="author" content="Jesús Manuel Juárez Acosta">
-    <meta property="og:title" content="Jesús Manuel Juárez Acosta - Portafolio de Ingeniero en Software">
-    <meta property="og:description"
-        content="Portafolio de Jesús Manuel Juárez Acosta, Ingeniero en Software especializado en desarrollo web y móvil. Egresado con experiencia en HTML5, CSS3, JavaScript, Flutter, Kotlin y React.">
-    <meta property="og:type" content="website">
-    <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://jesusmanueljuarez.com/">
+    <title>Jesús Manuel Juárez Acosta | Software Engineer</title>
+    <meta name="description" content="Portafolio de Jesús Manuel Juárez Acosta, Ingeniero en Software especializado en desarrollo web y móvil.">
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
-        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
 </head>
-
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <span class="logo-text">JM</span>
-            </div>
-            <ul class="nav-menu">
-                <li><a href="#home" class="nav-link">Inicio</a></li>
-                <li><a href="#about" class="nav-link">Sobre mí</a></li>
-                <li><a href="#experience" class="nav-link">Experiencia</a></li>
-                <li><a href="#skills" class="nav-link">Habilidades</a></li>
-                <li><a href="#projects" class="nav-link">Proyectos</a></li>
-                <li><a href="#contact" class="nav-link">Contacto</a></li>
-            </ul>
-            <div class="theme-toggle">
-                <i class="fas fa-moon" id="theme-icon"></i>
-            </div>
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-        <div class="scroll-progress"></div>
+
+    <!-- Animated Grid Background -->
+    <div id="hero-grid"></div>
+
+    <!-- Navbar -->
+    <nav>
+        <a href="#home" class="nav-brand">JM.</a>
+        <ul class="nav-links">
+            <li><a href="#about">Sobre Mí</a></li>
+            <li><a href="#experience">Experiencia</a></li>
+            <li><a href="#projects">Proyectos</a></li>
+            <li><a href="#contact">Contacto</a></li>
+        </ul>
     </nav>
 
-    <!-- Scroll to top button -->
-    <button class="scroll-to-top" id="scrollToTop">
-        <i class="fas fa-arrow-up"></i>
-    </button>
+    <!-- Hero Section -->
+    <section id="home" class="hero container">
+        <div class="hero-content reveal">
+            <span class="hero-greeting">Iniciativa Konekta</span>
+            <h1 class="hero-title">Jesús Manuel<br>Juárez Acosta</h1>
+            <h2 class="hero-subtitle">
+                <span id="typing-text">Ingeniero en Software</span><span class="typing-cursor"></span>
+            </h2>
+            <p class="hero-desc">
+                Desarrollador full-stack apasionado por crear soluciones digitales innovadoras. 
+                Especializado en desarrollo web y móvil con enfoque en interfaces escalables y experiencias modernas.
+            </p>
+            <div style="display: flex; gap: 1rem;">
+                <a href="#projects" class="btn btn-primary">Ver Proyectos <i class="fas fa-chevron-right"></i></a>
+                <a href="#contact" class="btn btn-outline">Contacto</a>
+            </div>
+        </div>
+    </section>
 
-    <header class="hero" id="home">
-        <div class="hero-content">
-            <div class="hero-text">
-                <span class="greeting">¡Hola! Soy</span>
-                <h1 class="hero-name">Jesús Manuel Juárez</h1>
-                <h2 class="hero-title">
-                    <span class="typing-text">Ingeniero en Software</span>
-                    <span class="cursor">|</span>
-                </h2>
-                <p class="hero-description">
-                    Desarrollador full-stack apasionado por crear soluciones digitales innovadoras.
-                    Especializado en desarrollo web y móvil con enfoque en experiencia de usuario y código limpio.
+    <!-- About Section -->
+    <section id="about" class="container">
+        <h2 class="section-title reveal">Sobre mí</h2>
+        <div class="glass-card reveal" style="display: flex; gap: 3rem; flex-wrap: wrap; align-items: center;">
+            <div style="flex: 1; min-width: 280px;">
+                <img src="assets/mi.webp" alt="Jesús Manuel" style="width: 100%; border-radius: 16px; border: 1px solid var(--border-subtle);">
+            </div>
+            <div style="flex: 2; min-width: 300px;">
+                <h3 style="margin-bottom: 1rem; color: var(--accent-cyan);">Transformando ideas en código</h3>
+                <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">
+                    Egresado de Ingeniería en Software con una pasión genuina por construir soluciones escalables.
+                    Mi enfoque se centra en crear aplicaciones que no solo funcionen perfectamente, sino que brinden 
+                    experiencias excepcionales a los usuarios, alejándome del "vibe coding" y priorizando buenas prácticas.
                 </p>
-                <div class="hero-buttons">
-                    <a href="#projects" class="btn btn-primary">Ver Proyectos</a>
-                    <a href="#contact" class="btn btn-secondary">Contactar</a>
-                </div>
-            </div>
-            <div class="hero-visual">
-                <div class="code-animation">
-                    <div class="code-line">
-                        <span class="code-keyword">const</span>
-                        <span class="code-variable">developer</span>
-                        <span class="code-operator">=</span>
-                        <span class="code-string">"Jesús Manuel"</span>
-                    </div>
-                    <div class="code-line">
-                        <span class="code-keyword">function</span>
-                        <span class="code-function">createAwesome</span>
-                        <span class="code-bracket">()</span>
-                        <span class="code-bracket">{</span>
-                    </div>
-                    <div class="code-line code-indent">
-                        <span class="code-keyword">return</span>
-                        <span class="code-string">"innovation"</span>
-                    </div>
-                    <div class="code-line">
-                        <span class="code-bracket">}</span>
-                    </div>
-                </div>
-            </div>
-            <div class="social-links">
-                <a href="https://github.com/jesusManuelJuarez" target="_blank" class="social-link">
-                    <i class="fab fa-github"></i>
-                    <span>GitHub</span>
-                </a>
-                <a href="https://www.linkedin.com/in/jesús-manuel-juárez-acosta-2a702b180" target="_blank"
-                    class="social-link">
-                    <i class="fab fa-linkedin"></i>
-                    <span>LinkedIn</span>
-                </a>
-            </div>
-        </div>
-        <div class="hero-scroll">
-            <div class="scroll-indicator">
-                <span>Scroll</span>
-                <div class="scroll-arrow"></div>
-            </div>
-        </div>
-    </header>
-
-    <section id="about" class="section">
-        <div class="container">
-            <div class="section-header">
-                <h2><i class="fas fa-user"></i> Sobre mí</h2>
-                <p class="section-subtitle">Conoce más sobre mi trayectoria y pasión por la tecnología</p>
-            </div>
-            <div class="about-content">
-                <div class="profile-section">
-                    <div class="profile-image">
-                        <img src="assets/mi.webp" alt="Jesús Manuel Juárez - Ingeniero en Software">
-                        <div class="profile-overlay">
-                            <div class="profile-stats">
-                                <div class="stat">
-                                    <span class="stat-number">2+</span>
-                                    <span class="stat-label">Años Experiencia</span>
-                                </div>
-                                <div class="stat">
-                                    <span class="stat-number">10+</span>
-                                    <span class="stat-label">Proyectos</span>
-                                </div>
-                            </div>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+                    <div>
+                        <h4 class="mono text-purple" style="font-size: 0.9rem; margin-bottom: 0.5rem;">Frontend</h4>
+                        <div class="tech-tags">
+                            <span class="tag">React</span>
+                            <span class="tag">Next.js</span>
+                            <span class="tag">Tailwind</span>
                         </div>
                     </div>
-                </div>
-                <div class="bio-section">
-                    <div class="bio-content">
-                        <h3>¡Hola! Soy Jesús Manuel</h3>
-                        <p class="bio-main">
-                            Egresado de Ingeniería en Software con una pasión genuina por transformar ideas en
-                            soluciones digitales.
-                            Mi enfoque se centra en crear aplicaciones que no solo funcionen perfectamente, sino que
-                            también
-                            brinden experiencias excepcionales a los usuarios.
-                        </p>
-                        <div class="bio-highlights">
-                            <div class="highlight">
-                                <i class="fas fa-code"></i>
-                                <div>
-                                    <h4>Desarrollo Full-Stack</h4>
-                                    <p>Experiencia en frontend y backend con tecnologías modernas</p>
-                                </div>
-                            </div>
-                            <div class="highlight">
-                                <i class="fas fa-mobile-alt"></i>
-                                <div>
-                                    <h4>Aplicaciones Móviles</h4>
-                                    <p>Desarrollo nativo y multiplataforma con Flutter y Kotlin</p>
-                                </div>
-                            </div>
-                            <div class="highlight">
-                                <i class="fas fa-lightbulb"></i>
-                                <div>
-                                    <h4>Soluciones Innovadoras</h4>
-                                    <p>Enfoque en crear productos que resuelvan problemas reales</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="bio-quote">
-                            <blockquote>
-                                "La tecnología es mejor cuando acerca a las personas"
-                            </blockquote>
+                    <div>
+                        <h4 class="mono text-cyan" style="font-size: 0.9rem; margin-bottom: 0.5rem;">Móvil</h4>
+                        <div class="tech-tags">
+                            <span class="tag">Flutter</span>
+                            <span class="tag">React Native</span>
+                            <span class="tag">Kotlin</span>
                         </div>
                     </div>
                 </div>
@@ -184,666 +81,144 @@
         </div>
     </section>
 
-    <section id="experience" class="section">
-        <div class="container">
-            <div class="section-header">
-                <h2><i class="fas fa-briefcase"></i> Experiencia</h2>
-                <p class="section-subtitle">Mi trayectoria profesional y académica</p>
-            </div>
+    <!-- Experience Section -->
+    <section id="experience" class="container">
+        <h2 class="section-title reveal">Experiencia</h2>
+        <div class="glass-card reveal">
             <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-date">Oct 2025 – Presente</div>
-                        <h3>Desarrollador Web</h3>
-                        <h4>Mako Capital</h4>
-                        <p>Desarrollo de plataforma de leasing con Next.js. Gestión de usuarios, roles y autenticación.
-                            Cotizador para distribuidores y clientes. Integración de servicios de terceros (Syntage).
-                        </p>
-                        <div class="timeline-skills">
-                            <span>Next.js</span>
-                            <span>Auth</span>
-                            <span>Syntage</span>
-                        </div>
+                
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">Oct 2025 – Presente</div>
+                    <div class="timeline-role">Desarrollador Web</div>
+                    <div class="timeline-company">@ Mako Capital</div>
+                    <p style="color: var(--text-secondary); font-size: 0.95rem;">
+                        Desarrollo de plataforma de leasing con Next.js. Gestión de usuarios, roles y autenticación. Cotizador para distribuidores y clientes. Integración de servicios de terceros (Syntage).
+                    </p>
+                </div>
+
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot" style="border-color: var(--text-muted);"></div>
+                    <div class="timeline-date" style="color: var(--text-muted);">Dic 2024 – Oct 2025</div>
+                    <div class="timeline-role">Desarrollador Frontend</div>
+                    <div class="timeline-company">@ Vulcanics</div>
+                    <p style="color: var(--text-secondary); font-size: 0.95rem;">
+                        Interfaces con React, Tailwind CSS, Vite + TS, shadcn/ui. Apps móviles en React Native, Kotlin y Flutter. Integración de OpenPay y automatización con bots.
+                    </p>
+                </div>
+
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot" style="border-color: var(--text-muted);"></div>
+                    <div class="timeline-date" style="color: var(--text-muted);">Ago 2023 – Dic 2024</div>
+                    <div class="timeline-role">Becario Voluntario</div>
+                    <div class="timeline-company">@ High Tech Process Counsellors</div>
+                    <p style="color: var(--text-secondary); font-size: 0.95rem;">
+                        Plataformas web en React + Vite + TS. Consumo de APIs y endpoints. Integración de pagos recurrentes.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="container">
+        <h2 class="section-title reveal">Proyectos Destacados</h2>
+        
+        <div class="projects-grid">
+            
+            <!-- Project 1 -->
+            <div class="glass-card project-card reveal">
+                <div class="project-img-wrapper">
+                    <img src="assets/mako_two.png" alt="Mako Capital">
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title text-cyan">Plataforma Mako Capital</h3>
+                    <p class="project-desc">Plataforma digital de leasing para arrendar equipos y gestionar cotizaciones a clientes y distribuidores.</p>
+                    <div class="tech-tags">
+                        <span class="tag">Next.js</span>
+                        <span class="tag">Dashboard</span>
+                        <span class="tag">Leasing</span>
                     </div>
                 </div>
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-date">Dic 2024 – Oct 2025</div>
-                        <h3>Desarrollador Frontend</h3>
-                        <h4>Vulcanics</h4>
-                        <p>Interfaces con React, Tailwind CSS, Vite + TS, shadcn/ui. Apps móviles en React Native,
-                            Kotlin y Flutter. Integración de OpenPay y automatización con bots.</p>
-                        <div class="timeline-skills">
-                            <span>React</span>
-                            <span>Tailwind</span>
-                            <span>TypeScript</span>
-                            <span>Flutter</span>
-                            <span>OpenPay</span>
-                        </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="glass-card project-card reveal">
+                <div class="project-img-wrapper">
+                    <img src="assets/vulcanics_one.png" alt="Vulcanics">
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title text-amber">Vulcanics Tasks</h3>
+                    <p class="project-desc">Gestor de tareas y actividades enfocado a la productividad de equipos de desarrollo.</p>
+                    <div class="tech-tags">
+                        <span class="tag">React</span>
+                        <span class="tag">Productivity</span>
                     </div>
                 </div>
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-date">Ago 2023 – Dic 2024</div>
-                        <h3>Becario Voluntario</h3>
-                        <h4>High Tech Process Counsellors</h4>
-                        <p>Plataformas web en React + Vite + TypeScript. Consumo de APIs y endpoints. Integración de
-                            pagos recurrentes con OpenPay.</p>
-                        <div class="timeline-skills">
-                            <span>React</span>
-                            <span>Vite</span>
-                            <span>TypeScript</span>
-                            <span>APIs</span>
-                        </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="glass-card project-card reveal">
+                <div class="project-img-wrapper">
+                    <img src="assets/bonkgames_two.png" alt="BonkGames">
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title text-green">BonkGames</h3>
+                    <p class="project-desc">Juego de acción web con diálogos interactivos y sistema de recompensas crypto.</p>
+                    <div class="tech-tags">
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">Game Dev</span>
                     </div>
                 </div>
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-date">2020 - 2024</div>
-                        <h3>Ingeniería en Software</h3>
-                        <h4>Universidad</h4>
-                        <p>Formación académica completa en desarrollo de software, algoritmos, estructuras de datos y
-                            metodologías ágiles.</p>
-                        <div class="timeline-skills">
-                            <span>Algoritmos</span>
-                            <span>Bases de Datos</span>
-                            <span>Metodologías Ágiles</span>
-                            <span>Arquitectura Software</span>
-                        </div>
+            </div>
+
+            <!-- Project 4 -->
+            <div class="glass-card project-card reveal">
+                <div class="project-img-wrapper">
+                    <img src="assets/safeapp_banner.png" alt="SafeApp">
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title text-pink">SafeApp</h3>
+                    <p class="project-desc">Aplicación móvil para gestión segura de contraseñas con cifrado avanzado.</p>
+                    <div class="tech-tags">
+                        <span class="tag">Kotlin</span>
+                        <span class="tag">SQLite</span>
+                        <span class="tag">Crypto</span>
                     </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="container">
+        <h2 class="section-title reveal">Contacto</h2>
+        <div class="glass-card reveal" style="text-align: center; max-width: 600px; margin: 0 auto;">
+            <div style="width: 60px; height: 60px; background: rgba(130,80,203,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem;">
+                <i class="fas fa-envelope text-purple" style="font-size: 1.5rem;"></i>
+            </div>
+            <h3 style="font-size: 2rem; margin-bottom: 1rem;">¿Creamos algo increíble?</h3>
+            <p style="color: var(--text-secondary); margin-bottom: 2rem;">
+                Actualmente estoy abierto a nuevas oportunidades de desarrollo y colaboración.
+            </p>
+            <div style="display: flex; flex-direction: column; gap: 1rem;">
+                <a href="mailto:manueljuarez.dev@gmail.com" class="btn btn-primary" style="justify-content: center;">
+                    manueljuarez.dev@gmail.com
+                </a>
+                <div style="display: flex; gap: 1rem; justify-content: center;">
+                    <a href="https://github.com/jesusManuelJuarez" target="_blank" class="btn btn-outline" style="flex: 1; justify-content: center;"><i class="fab fa-github"></i> GitHub</a>
+                    <a href="https://www.linkedin.com/in/jesús-manuel-juárez-acosta-2a702b180" target="_blank" class="btn btn-outline" style="flex: 1; justify-content: center;"><i class="fab fa-linkedin"></i> LinkedIn</a>
                 </div>
             </div>
         </div>
     </section>
-    <sect ion id="skills" class="section">
-        <div class="container">
-            <div class="section-header">
-                <h2><i class="fas fa-tools"></i> Habilidades</h2>
-                <p class="section-subtitle">Tecnologías y herramientas que domino</p>
-            </div>
-            <div class="skills-categories">
-                <div class="skill-category">
-                    <h3><i class="fas fa-laptop-code"></i> Frontend</h3>
-                    <div class="skills-grid">
-                        <div class="skill-card" data-skill="html">
-                            <div class="skill-icon">
-                                <i class="fab fa-html5"></i>
-                            </div>
-                            <div class="skill-info">
-                                <h4>HTML5</h4>
-                                <p>Estructuras semánticas y accesibles</p>
-                                <div class="skill-level">
-                                    <div class="skill-bar" data-level="90"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="skill-card" data-skill="css">
-                            <div class="skill-icon">
-                                <i class="fab fa-css3-alt"></i>
-                            </div>
-                            <div class="skill-info">
-                                <h4>CSS3</h4>
-                                <p>Diseño responsivo y animaciones</p>
-                                <div class="skill-level">
-                                    <div class="skill-bar" data-level="85"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="skill-card" data-skill="js">
-                            <div class="skill-icon">
-                                <i class="fab fa-js"></i>
-                            </div>
-                            <div class="skill-info">
-                                <h4>JavaScript</h4>
-                                <p>Aplicaciones interactivas modernas</p>
-                                <div class="skill-level">
-                                    <div class="skill-bar" data-level="80"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="skill-card" data-skill="react">
-                            <div class="skill-icon">
-                                <i class="fab fa-react"></i>
-                            </div>
-                            <div class="skill-info">
-                                <h4>React</h4>
-                                <p>Componentes reutilizables y SPA</p>
-                                <div class="skill-level">
-                                    <div class="skill-bar" data-level="75"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3><i class="fas fa-mobile-alt"></i> Mobile</h3>
-                    <div class="skills-grid">
-                        <div class="skill-card" data-skill="flutter">
-                            <div class="skill-icon">
-                                <i class="fab fa-flutter"></i>
-                            </div>
-                            <div class="skill-info">
-                                <h4>Flutter</h4>
-                                <p>Desarrollo multiplataforma</p>
-                                <div class="skill-level">
-                                    <div class="skill-bar" data-level="85"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="skill-card" data-skill="kotlin">
-                            <div class="skill-icon">
-                                <i class="fab fa-android"></i>
-                            </div>
-                            <div class="skill-info">
-                                <h4>Kotlin</h4>
-                                <p>Desarrollo Android nativo</p>
-                                <div class="skill-level">
-                                    <div class="skill-bar" data-level="80"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3><i class="fas fa-server"></i> Backend & Tools</h3>
-                    <div class="skills-grid">
-                        <div class="skill-card" data-skill="java">
-                            <div class="skill-icon">
-                                <i class="fab fa-java"></i>
-                            </div>
-                            <div class="skill-info">
-                                <h4>Java</h4>
-                                <p>Programación orientada a objetos</p>
-                                <div class="skill-level">
-                                    <div class="skill-bar" data-level="75"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="skill-card" data-skill="git">
-                            <div class="skill-icon">
-                                <i class="fab fa-git-alt"></i>
-                            </div>
-                            <div class="skill-info">
-                                <h4>Git</h4>
-                                <p>Control de versiones</p>
-                                <div class="skill-level">
-                                    <div class="skill-bar" data-level="85"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="skill-card" data-skill="database">
-                            <div class="skill-icon">
-                                <i class="fas fa-database"></i>
-                            </div>
-                            <div class="skill-info">
-                                <h4>Databases</h4>
-                                <p>SQL, SQLite, Firebase</p>
-                                <div class="skill-level">
-                                    <div class="skill-bar" data-level="70"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        </section>
 
-        <section id="projects" class="section">
-            <div class="container">
-                <div class="section-header">
-                    <h2><i class="fas fa-project-diagram"></i> Proyectos</h2>
-                    <p class="section-subtitle">Algunos de mis trabajos más destacados</p>
-                </div>
-                <div class="projects-filter">
-                    <button class="filter-btn active" data-filter="all">Todos</button>
-                    <button class="filter-btn" data-filter="mobile">Móvil</button>
-                    <button class="filter-btn" data-filter="web">Web</button>
-                </div>
-                <div class="projects-grid">
-                    <div class="project-card" data-category="mobile">
-                        <div class="project-image">
-                            <img src="assets/safeapp_banner.png" alt="SafeApp">
-                            <div class="project-overlay">
-                                <div class="project-links">
-                                    <a href="https://play.google.com/store/apps/details?id=com.Acorex.safeapp"
-                                        target="_blank" class="project-link">
-                                        <i class="fab fa-google-play"></i>
-                                    </a>
-                                    <a href="#" class="project-link project-details-btn" data-project="safeapp">
-                                        <i class="fas fa-info-circle"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="project-content">
-                            <div class="project-header">
-                                <h3>SafeApp</h3>
-                                <div class="project-status">
-                                    <span class="status-badge published">Publicado</span>
-                                </div>
-                            </div>
-                            <p>Aplicación móvil para gestión segura de contraseñas con cifrado avanzado y sincronización
-                                en la nube.</p>
-                            <div class="tech-stack">
-                                <span class="tech-tag">Kotlin</span>
-                                <span class="tech-tag">Java</span>
-                                <span class="tech-tag">Android SDK</span>
-                                <span class="tech-tag">SQLite</span>
-                            </div>
-                            <div class="project-stats">
-                                <div class="stat">
-                                    <i class="fas fa-download"></i>
-                                    <span>500+ descargas</span>
-                                </div>
-                                <div class="stat">
-                                    <i class="fas fa-star"></i>
-                                    <span>4.2/5</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+    <footer>
+        <p>Jesús Manuel Juárez Acosta &copy; 2026. Terminal Glassmorphism Design.</p>
+    </footer>
 
-                    <div class="project-card" data-category="web">
-                        <div class="project-image">
-                            <img src="assets/safeapp_politices.png" alt="SafeApp Políticas">
-                            <div class="project-overlay">
-                                <div class="project-links">
-                                    <a href="https://safeapp.netlify.app/" target="_blank" class="project-link">
-                                        <i class="fas fa-globe"></i>
-                                    </a>
-                                    <a href="#" class="project-link project-details-btn" data-project="policies">
-                                        <i class="fas fa-info-circle"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="project-content">
-                            <div class="project-header">
-                                <h3>SafeApp - Políticas</h3>
-                                <div class="project-status">
-                                    <span class="status-badge live">En vivo</span>
-                                </div>
-                            </div>
-                            <p>Sitio web responsive para políticas de privacidad y términos de servicio de SafeApp.</p>
-                            <div class="tech-stack">
-                                <span class="tech-tag">React</span>
-                                <span class="tech-tag">HTML5</span>
-                                <span class="tech-tag">CSS3</span>
-                                <span class="tech-tag">Netlify</span>
-                            </div>
-                            <div class="project-stats">
-                                <div class="stat">
-                                    <i class="fas fa-eye"></i>
-                                    <span>1K+ visitas</span>
-                                </div>
-                                <div class="stat">
-                                    <i class="fas fa-mobile-alt"></i>
-                                    <span>100% responsive</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="project-card" data-category="web">
-                        <div class="project-image">
-                            <img src="assets/mako_one.png" alt="Plataforma Mako Capital">
-                            <img src="assets/mako_two.png" alt="Plataforma Mako Capital - Interfaz" class="img-hover">
-                            <div class="project-overlay">
-                                <div class="project-links">
-                                    <a href="#" class="project-link">
-                                        <i class="fas fa-globe"></i>
-                                    </a>
-                                    <a href="#" class="project-link project-details-btn" data-project="mako">
-                                        <i class="fas fa-info-circle"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="project-content">
-                            <div class="project-header">
-                                <h3>Plataforma Mako Capital</h3>
-                                <div class="project-status">
-                                    <span class="status-badge live">En vivo</span>
-                                </div>
-                            </div>
-                            <p>Plataforma digital de leasing para arrendar diferentes equipos asi como para ofrecer esos
-                                arredamientos o tambien consultar diferectamente ese arredamiento.</p>
-                            <div class="tech-stack">
-                                <span class="tech-tag">Web Platform</span>
-                                <span class="tech-tag">Leasing</span>
-                                <span class="tech-tag">Dashboard</span>
-                            </div>
-                            <div class="project-stats">
-                                <div class="stat">
-                                    <i class="fas fa-calendar"></i>
-                                    <span>2025</span>
-                                </div>
-                                <div class="stat">
-                                    <i class="fas fa-layer-group"></i>
-                                    <span>Plataforma</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="project-card" data-category="web">
-                        <div class="project-image">
-                            <img src="assets/vulcanics_one.png" alt="Vulvanics">
-                            <div class="project-overlay">
-                                <div class="project-links">
-                                    <a href="#" class="project-link">
-                                        <i class="fas fa-globe"></i>
-                                    </a>
-                                    <a href="#" class="project-link project-details-btn" data-project="vulvanics">
-                                        <i class="fas fa-info-circle"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="project-content">
-                            <div class="project-header">
-                                <h3>Vulvanics</h3>
-                                <div class="project-status">
-                                    <span class="status-badge live">En vivo</span>
-                                </div>
-                            </div>
-                            <p>Gestor de tareas y actividades de desarrollador.</p>
-                            <div class="tech-stack">
-                                <span class="tech-tag">Task Manager</span>
-                                <span class="tech-tag">Productivity</span>
-                                <span class="tech-tag">Web App</span>
-                            </div>
-                            <div class="project-stats">
-                                <div class="stat">
-                                    <i class="fas fa-calendar"></i>
-                                    <span>2025</span>
-                                </div>
-                                <div class="stat">
-                                    <i class="fas fa-check-circle"></i>
-                                    <span>Gestión</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="project-card" data-category="web">
-                        <div class="project-image">
-                            <img src="assets/soc_one.png" alt="SOC Grupo Financiero">
-                            <img src="assets/soc_two.png" alt="SOC Grupo Financiero - Dashboard" class="img-hover">
-                            <div class="project-overlay">
-                                <div class="project-links">
-                                    <a href="#" class="project-link">
-                                        <i class="fas fa-globe"></i>
-                                    </a>
-                                    <a href="#" class="project-link project-details-btn" data-project="soc">
-                                        <i class="fas fa-info-circle"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="project-content">
-                            <div class="project-header">
-                                <h3>SOC Grupo Financiero</h3>
-                                <div class="project-status">
-                                    <span class="status-badge live">En vivo</span>
-                                </div>
-                            </div>
-                            <p>Plataforma de SOC grupo financiero, dashboard de control de conversaciones de
-                                iteraciones con bots para dar soporte a clientes.</p>
-                            <div class="tech-stack">
-                                <span class="tech-tag">Dashboard</span>
-                                <span class="tech-tag">Bot Integration</span>
-                                <span class="tech-tag">Support</span>
-                            </div>
-                            <div class="project-stats">
-                                <div class="stat">
-                                    <i class="fas fa-calendar"></i>
-                                    <span>2025</span>
-                                </div>
-                                <div class="stat">
-                                    <i class="fas fa-robot"></i>
-                                    <span>Bot Control</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="project-card" data-category="web">
-                        <div class="project-image">
-                            <div class="project-placeholder">
-                                <i class="fas fa-code"></i>
-                                <span>Portafolio Personal</span>
-                            </div>
-                            <div class="project-overlay">
-                                <div class="project-links">
-                                    <a href="https://github.com/jesusManuelJuarez" target="_blank" class="project-link">
-                                        <i class="fab fa-github"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="project-content">
-                            <div class="project-header">
-                                <h3>Portafolio Personal</h3>
-                                <div class="project-status">
-                                    <span class="status-badge development">En desarrollo</span>
-                                </div>
-                            </div>
-                            <p>Sitio web personal moderno y responsive para mostrar mis proyectos y habilidades como
-                                desarrollador.</p>
-                            <div class="tech-stack">
-                                <span class="tech-tag">HTML5</span>
-                                <span class="tech-tag">CSS3</span>
-                                <span class="tech-tag">JavaScript</span>
-                                <span class="tech-tag">Responsive</span>
-                            </div>
-                            <div class="project-stats">
-                                <div class="stat">
-                                    <i class="fas fa-palette"></i>
-                                    <span>UI/UX moderno</span>
-                                </div>
-                                <div class="stat">
-                                    <i class="fas fa-rocket"></i>
-                                    <span>Optimizado</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-card" data-category="web">
-                        <div class="project-image">
-                            <img src="assets/bonkgames_one.png" alt="BonkGames">
-                            <div class="project-overlay">
-                                <div class="project-links">
-                                    <a href="https://bonkgames.io" target="_blank" class="project-link">
-                                        <i class="fas fa-globe"></i>
-                                    </a>
-                                    <a href="#" class="project-link project-details-btn" data-project="bonkgames">
-                                        <i class="fas fa-info-circle"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="project-content">
-                            <div class="project-header">
-                                <h3>BonkGames</h3>
-                                <div class="project-status">
-                                    <span class="status-badge completed">Completado</span>
-                                </div>
-                            </div>
-                            <p>Juego de acción con diálogos interactivos que integra criptomonedas como sistema de
-                                recompensas, desarrollado con JavaScript puro.</p>
-                            <div class="tech-stack">
-                                <span class="tech-tag">JavaScript</span>
-                                <span class="tech-tag">HTML5</span>
-                                <span class="tech-tag">CSS3</span>
-                            </div>
-                            <div class="project-stats">
-                                <div class="stat">
-                                    <i class="fas fa-calendar"></i>
-                                    <span>Mayo 2025</span>
-                                </div>
-                                <div class="stat">
-                                    <i class="fas fa-gamepad"></i>
-                                    <span>Juego Web</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="project-card" data-category="web">
-                        <div class="project-image">
-                            <img src="assets/skala.png" alt="Skala">
-                            <div class="project-overlay">
-                                <div class="project-links">
-                                    <a href="#" class="project-link">
-                                        <i class="fas fa-globe"></i>
-                                    </a>
-                                    <a href="#" class="project-link project-details-btn" data-project="skala">
-                                        <i class="fas fa-info-circle"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="project-content">
-                            <div class="project-header">
-                                <h3>Skala</h3>
-                                <div class="project-status">
-                                    <span class="status-badge completed">Completado</span>
-                                </div>
-                            </div>
-                            <p>Plataforma de reclutamiento digital que conecta candidatos talentosos con reclutadores
-                                profesionales, facilitando procesos de selección eficientes.</p>
-                            <div class="tech-stack">
-                                <span class="tech-tag">React</span>
-                                <span class="tech-tag">Tailwind CSS</span>
-                                <span class="tech-tag">JavaScript</span>
-                            </div>
-                            <div class="project-stats">
-                                <div class="stat">
-                                    <i class="fas fa-calendar"></i>
-                                    <span>Marzo 2025</span>
-                                </div>
-                                <div class="stat">
-                                    <i class="fas fa-rocket"></i>
-                                    <span>App Moderna</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="contact" class="section">
-            <div class="container">
-                <div class="section-header">
-                    <h2><i class="fas fa-envelope"></i> Contacto</h2>
-                    <p class="section-subtitle">¿Tienes un proyecto en mente? ¡Hablemos!</p>
-                </div>
-                <div class="contact-content">
-                    <div class="contact-info">
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <i class="fas fa-phone"></i>
-                            </div>
-                            <div class="contact-details">
-                                <h4>Teléfono / WhatsApp</h4>
-                                <p>+52 932 124 5763</p>
-                                <div class="contact-actions">
-                                    <a href="tel:+529321245763" class="contact-link">
-                                        <i class="fas fa-phone"></i> Llamar
-                                    </a>
-                                    <a href="#" class="contact-link whatsapp-link">
-                                        <i class="fab fa-whatsapp"></i> WhatsApp
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <i class="fas fa-envelope"></i>
-                            </div>
-                            <div class="contact-details">
-                                <h4>Email</h4>
-                                <p>manueljuarez.dev@gmail.com</p>
-                                <a href="mailto:manueljuarez.dev@gmail.com" class="contact-link">Enviar email</a>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <i class="fas fa-map-marker-alt"></i>
-                            </div>
-                            <div class="contact-details">
-                                <h4>Ubicación</h4>
-                                <p>Pichucalco, Chiapas, México</p>
-                                <span class="contact-link">Disponible para trabajo remoto</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="contact-cta">
-                        <h3>¿Listo para trabajar juntos?</h3>
-                        <p>Estoy disponible para proyectos freelance y oportunidades de colaboración.</p>
-                        <div class="cta-buttons">
-                            <a href="#" id="whatsappBtn" class="btn btn-primary">
-                                <i class="fab fa-whatsapp"></i>
-                                Enviar mensaje
-                            </a>
-                            <a href="https://www.linkedin.com/in/jesús-manuel-juárez-acosta-2a702b180" target="_blank"
-                                class="btn btn-secondary">
-                                <i class="fab fa-linkedin"></i>
-                                Conectar en LinkedIn
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <footer class="footer">
-            <div class="container">
-                <div class="footer-content">
-                    <div class="footer-info">
-                        <div class="footer-logo">
-                            <span class="logo-text">JM</span>
-                        </div>
-                        <p>Desarrollador apasionado por crear soluciones digitales innovadoras.</p>
-                    </div>
-                    <div class="footer-links">
-                        <div class="footer-section">
-                            <h4>Navegación</h4>
-                            <ul>
-                                <li><a href="#home">Inicio</a></li>
-                                <li><a href="#about">Sobre mí</a></li>
-                                <li><a href="#projects">Proyectos</a></li>
-                                <li><a href="#contact">Contacto</a></li>
-                            </ul>
-                        </div>
-                        <div class="footer-section">
-                            <h4>Redes Sociales</h4>
-                            <div class="footer-social">
-                                <a href="https://github.com/jesusManuelJuarez" target="_blank">
-                                    <i class="fab fa-github"></i>
-                                </a>
-                                <a href="https://www.linkedin.com/in/jesús-manuel-juárez-acosta-2a702b180"
-                                    target="_blank">
-                                    <i class="fab fa-linkedin"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="footer-bottom">
-                    <p>&copy; 2025 Jesús Manuel Juárez Acosta. Todos los derechos reservados.</p>
-                </div>
-            </div>
-        </footer>
-
-        <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
-
 </html>

@@ -1,0 +1,11 @@
+{
+  "name": "portfolio-jm",
+  "version": "2.0.0",
+  "description": "Portafolio personal — Jesús Manuel Juárez Acosta",
+  "scripts": {
+    "dev": "npx -y live-server --port=5500 --no-browser",
+    "build": "echo 'Static site — no build step required'"
+  },
+  "author": "Jesús Manuel Juárez Acosta",
+  "license": "MIT"
+}
