@@ -64,6 +64,53 @@ body {
   float: left;
 }
 
+/* Floating Shapes for Hero/Scroll (Google Lens Style) */
+#hero-shapes {
+  position: fixed; /* Fixed so they stay in background across the whole page */
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: -1;
+  overflow: hidden;
+  mix-blend-mode: screen;
+}
+
+.hero-shape {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: 0.4;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Start at center */
+}
+
+.shape-1 {
+  width: 40vw;
+  height: 40vw;
+  background: var(--accent-cyan); /* Blue/Cyan */
+}
+
+.shape-2 {
+  width: 35vw;
+  height: 35vw;
+  background: var(--accent-pink); /* Red/Pink */
+}
+
+.shape-3 {
+  width: 45vw;
+  height: 45vw;
+  background: var(--accent-amber); /* Yellow/Amber */
+}
+
+.shape-4 {
+  width: 38vw;
+  height: 38vw;
+  background: var(--accent-green); /* Green */
+}
+
 /* Typography */
 h1, h2, h3, h4 {
   font-family: var(--font-body);

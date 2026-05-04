@@ -8,12 +8,27 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <!-- Import Anime.js v4 -->
+    <script type="importmap">
+      {
+        "imports": {
+          "animejs": "https://esm.sh/animejs@4.3.6"
+        }
+      }
+    </script>
 </head>
 <body>
 
     <!-- Animated Grid Background -->
     <div id="hero-grid"></div>
+
+    <!-- Hero Elements for scroll transitions -->
+    <div id="hero-shapes">
+      <div class="hero-shape shape-1"></div>
+      <div class="hero-shape shape-2"></div>
+      <div class="hero-shape shape-3"></div>
+      <div class="hero-shape shape-4"></div>
+    </div>
 
     <!-- Navbar -->
     <nav>
@@ -29,10 +44,9 @@
     <!-- Hero Section -->
     <section id="home" class="hero container">
         <div class="hero-content reveal">
-            <span class="hero-greeting">Iniciativa Konekta</span>
             <h1 class="hero-title">Jesús Manuel<br>Juárez Acosta</h1>
             <h2 class="hero-subtitle">
-                <span id="typing-text">Ingeniero en Software</span><span class="typing-cursor"></span>
+                <span id="typing-text"></span><span class="typing-cursor"></span>
             </h2>
             <p class="hero-desc">
                 Desarrollador full-stack apasionado por crear soluciones digitales innovadoras. 
@@ -49,10 +63,10 @@
     <section id="about" class="container">
         <h2 class="section-title reveal">Sobre mí</h2>
         <div class="glass-card reveal" style="display: flex; gap: 3rem; flex-wrap: wrap; align-items: center;">
-            <div style="flex: 1; min-width: 280px;">
+            <div style="flex: 1; min-width: 280px;" class="about-image-wrapper">
                 <img src="assets/mi.webp" alt="Jesús Manuel" style="width: 100%; border-radius: 16px; border: 1px solid var(--border-subtle);">
             </div>
-            <div style="flex: 2; min-width: 300px;">
+            <div style="flex: 2; min-width: 300px;" class="about-content-wrapper">
                 <h3 style="margin-bottom: 1rem; color: var(--accent-cyan);">Transformando ideas en código</h3>
                 <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">
                     Egresado de Ingeniería en Software con una pasión genuina por construir soluciones escalables.
@@ -93,7 +107,7 @@
                     <div class="timeline-role">Desarrollador Web</div>
                     <div class="timeline-company">@ Mako Capital</div>
                     <p style="color: var(--text-secondary); font-size: 0.95rem;">
-                        Desarrollo de plataforma de leasing con Next.js. Gestión de usuarios, roles y autenticación. Cotizador para distribuidores y clientes. Integración de servicios de terceros (Syntage).
+                        Desarrollo de plataforma de leasing con Next.js. Gestión de usuarios, roles y autenticación. Cotizador para distribuidores y clientes. Integración de servicios de terceros (Syntage). Desarrollo de bots inteligentes con dashboard utilizando Flowise, Kaspo y backend propio.
                     </p>
                 </div>
 
@@ -126,6 +140,22 @@
         <h2 class="section-title reveal">Proyectos Destacados</h2>
         
         <div class="projects-grid">
+            
+            <!-- Project 0 -->
+            <div class="glass-card project-card reveal">
+                <div class="project-img-wrapper" style="background-color: var(--bg-deep); display: flex; align-items: center; justify-content: center; padding: 2rem;">
+                    <img src="assets/not_vibe_coding_logo.png" alt="Not Vibe Coding" style="object-fit: contain; border-radius: 8px;">
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title text-purple">Not Vibe Coding</h3>
+                    <p class="project-desc">App y plataforma para dominar los fundamentos de la programación y dejar de ser un "vibe coder".</p>
+                    <div class="tech-tags">
+                        <span class="tag">Next.js</span>
+                        <span class="tag">Anime.js v4</span>
+                        <span class="tag">Tailwind</span>
+                    </div>
+                </div>
+            </div>
             
             <!-- Project 1 -->
             <div class="glass-card project-card reveal">
@@ -219,6 +249,6 @@
         <p>Jesús Manuel Juárez Acosta &copy; 2026. Terminal Glassmorphism Design.</p>
     </footer>
 
-    <script src="script.js"></script>
+    <script type="module" src="script.js"></script>
 </body>
 </html>
