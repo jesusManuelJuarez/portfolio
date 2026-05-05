@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jesús Manuel Juárez Acosta | Software Engineer</title>
-    <meta name="description" content="Portafolio de Jesús Manuel Juárez Acosta, Ingeniero en Software especializado en desarrollo web y móvil.">
+    <meta name="description" content="Portafolio de Jesús Manuel Juárez Acosta, Ingeniero en Software especializado en desarrollo web, móvil y automatización con agentes LLM.">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
@@ -34,8 +34,7 @@
     <nav>
         <a href="#home" class="nav-brand">JM.</a>
         <ul class="nav-links">
-            <li><a href="#about">Sobre Mí</a></li>
-            <li><a href="#experience">Experiencia</a></li>
+            <li><a href="#about">CV</a></li>
             <li><a href="#projects">Proyectos</a></li>
             <li><a href="#contact">Contacto</a></li>
         </ul>
@@ -50,7 +49,8 @@
             </h2>
             <p class="hero-desc">
                 Desarrollador full-stack apasionado por crear soluciones digitales innovadoras. 
-                Especializado en desarrollo web y móvil con enfoque en interfaces escalables y experiencias modernas.
+                Especializado en desarrollo web, móvil y automatización inteligente con agentes LLM, 
+                priorizando buenas prácticas sobre el "vibe coding".
             </p>
             <div style="display: flex; gap: 1rem;">
                 <a href="#projects" class="btn btn-primary">Ver Proyectos <i class="fas fa-chevron-right"></i></a>
@@ -59,78 +59,205 @@
         </div>
     </section>
 
-    <!-- About Section -->
+    <!-- CV Section (Nosotros-style glassmorphism) -->
     <section id="about" class="container">
-        <h2 class="section-title reveal">Sobre mí</h2>
-        <div class="glass-card reveal" style="display: flex; gap: 3rem; flex-wrap: wrap; align-items: center;">
-            <div style="flex: 1; min-width: 280px;" class="about-image-wrapper">
-                <img src="assets/mi.webp" alt="Jesús Manuel" style="width: 100%; border-radius: 16px; border: 1px solid var(--border-subtle);">
-            </div>
-            <div style="flex: 2; min-width: 300px;" class="about-content-wrapper">
-                <h3 style="margin-bottom: 1rem; color: var(--accent-cyan);">Transformando ideas en código</h3>
-                <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">
-                    Egresado de Ingeniería en Software con una pasión genuina por construir soluciones escalables.
-                    Mi enfoque se centra en crear aplicaciones que no solo funcionen perfectamente, sino que brinden 
-                    experiencias excepcionales a los usuarios, alejándome del "vibe coding" y priorizando buenas prácticas.
-                </p>
-                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
-                    <div>
-                        <h4 class="mono text-purple" style="font-size: 0.9rem; margin-bottom: 0.5rem;">Frontend</h4>
-                        <div class="tech-tags">
-                            <span class="tag">React</span>
-                            <span class="tag">Next.js</span>
-                            <span class="tag">Tailwind</span>
+        <h2 class="section-title reveal">Currículum Vitae</h2>
+        
+        <div class="cv-wrapper reveal">
+            <div class="cv-inner">
+                <div class="cv-grid">
+                    
+                    <!-- Left Column: Profile & Contact -->
+                    <div class="cv-left">
+                        <!-- Identity -->
+                        <div>
+                            <h3 class="cv-name">Jesús Manuel Juárez Acosta</h3>
+                            <p class="cv-role">
+                                <span class="pulse-dot"></span>
+                                Ingeniero en Software
+                            </p>
+                        </div>
+                        
+                        <!-- Contact Info -->
+                        <div class="cv-contact">
+                            <div class="cv-contact-item">
+                                <span class="icon text-purple">~</span>
+                                <span>Jorge Camacho Vidal, Calle 14<br>Pichucalco, Chiapas, México</span>
+                            </div>
+                            <div class="cv-contact-item">
+                                <span class="icon text-cyan">I</span>
+                                <span>+52 932 124 5763</span>
+                            </div>
+                            <div class="cv-contact-item">
+                                <span class="icon text-amber">#</span>
+                                <span>manueljuarez.dev@gmail.com</span>
+                            </div>
+                        </div>
+
+                        <!-- Links -->
+                        <div class="cv-links">
+                            <a href="https://me.konektaa.lat" target="_blank" class="cv-link-card">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span>me.konektaa.lat</span>
+                            </a>
+                            <a href="https://www.linkedin.com/in/jesús-manuel-juárez-acosta-2a702b180" target="_blank" class="cv-link-card">
+                                <i class="fab fa-linkedin"></i>
+                                <span>jesús-manuel-juárez-acosta</span>
+                            </a>
+                            <a href="https://github.com/jesusManuelJuarez" target="_blank" class="cv-link-card">
+                                <i class="fab fa-github"></i>
+                                <span>jesusManuelJuarez</span>
+                            </a>
+                        </div>
+
+                        <!-- Skills -->
+                        <div class="cv-section-divider">
+                            <h4 class="cv-section-heading">
+                                <i class="fas fa-code text-purple"></i> Habilidades Técnicas
+                            </h4>
+                            <div class="cv-skills-group">
+                                <div>
+                                    <p class="cv-skills-group-label">Frontend</p>
+                                    <div class="cv-skills-tags">
+                                        <span class="cv-skill-tag frontend">React</span>
+                                        <span class="cv-skill-tag frontend">Next.js</span>
+                                        <span class="cv-skill-tag frontend">Vue.js</span>
+                                        <span class="cv-skill-tag frontend">Nuxt.js</span>
+                                        <span class="cv-skill-tag frontend">Vite + TS</span>
+                                        <span class="cv-skill-tag frontend">Tailwind</span>
+                                        <span class="cv-skill-tag frontend">shadcn/ui</span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <p class="cv-skills-group-label">Móvil</p>
+                                    <div class="cv-skills-tags">
+                                        <span class="cv-skill-tag mobile">React Native</span>
+                                        <span class="cv-skill-tag mobile">Kotlin</span>
+                                        <span class="cv-skill-tag mobile">Flutter</span>
+                                        <span class="cv-skill-tag mobile">Expo</span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <p class="cv-skills-group-label">Backend & Cloud</p>
+                                    <div class="cv-skills-tags">
+                                        <span class="cv-skill-tag backend">Node.js</span>
+                                        <span class="cv-skill-tag backend">Docker</span>
+                                        <span class="cv-skill-tag backend">AWS / EKS</span>
+                                        <span class="cv-skill-tag backend">Supabase</span>
+                                        <span class="cv-skill-tag backend">Firebase</span>
+                                        <span class="cv-skill-tag backend">Laravel</span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <p class="cv-skills-group-label">IA & Automatización</p>
+                                    <div class="cv-skills-tags">
+                                        <span class="cv-skill-tag ai">Flowise</span>
+                                        <span class="cv-skill-tag ai">Gemini Flash</span>
+                                        <span class="cv-skill-tag ai">Agentes LLM</span>
+                                        <span class="cv-skill-tag ai">WebRTC</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Education -->
+                        <div class="cv-section-divider">
+                            <h4 class="cv-section-heading">
+                                <i class="fas fa-graduation-cap text-green"></i> Educación
+                            </h4>
+                            <div>
+                                <h5 class="cv-edu-title">Ingeniería en Software</h5>
+                                <p class="cv-edu-school">Universidad Politécnica de Chiapas</p>
+                                <p class="cv-edu-date">2019 – 2023</p>
+                            </div>
                         </div>
                     </div>
-                    <div>
-                        <h4 class="mono text-cyan" style="font-size: 0.9rem; margin-bottom: 0.5rem;">Móvil</h4>
-                        <div class="tech-tags">
-                            <span class="tag">Flutter</span>
-                            <span class="tag">React Native</span>
-                            <span class="tag">Kotlin</span>
+
+                    <!-- Right Column: Profile + Experience -->
+                    <div class="cv-right">
+                        <!-- Professional Profile -->
+                        <div class="cv-profile-box">
+                            <h3>Perfil Profesional</h3>
+                            <p>
+                                Ingeniero en Software con experiencia en desarrollo web y móvil, enfocado en React, Next.js, Vue.js, Nuxt.js, React Native, Kotlin y Flutter. 
+                                Especializado en interfaces modernas y escalables, consumo de APIs, pagos digitales y automatización. 
+                                Experiencia diseñando agentes LLM con Flowise, dashboards de bots con Gemini Flash, e infraestructura en AWS EKS con Docker. 
+                                Apasionado por las buenas prácticas de desarrollo, alejándose del "vibe coding" y priorizando código mantenible.
+                            </p>
                         </div>
+
+                        <!-- Experience Timeline -->
+                        <div>
+                            <h4 class="cv-section-heading">
+                                <i class="fas fa-briefcase text-pink"></i> Experiencia Laboral
+                            </h4>
+                            
+                            <div class="cv-timeline">
+                                <!-- Job 1: Mako Capital -->
+                                <div class="cv-timeline-item">
+                                    <div class="cv-timeline-dot">
+                                        <div class="inner-dot"></div>
+                                    </div>
+                                    <div class="cv-timeline-header">
+                                        <div>
+                                            <div class="cv-timeline-role">Desarrollador Web</div>
+                                            <div class="cv-timeline-company text-cyan">@ Mako Capital</div>
+                                        </div>
+                                        <span class="cv-timeline-date active">Oct 2025 – Presente</span>
+                                    </div>
+                                    <div class="cv-timeline-tasks">
+                                        <p class="cv-timeline-task"><span class="chevron">›</span> Desarrollo de plataforma de leasing con Next.js (Camelia).</p>
+                                        <p class="cv-timeline-task"><span class="chevron">›</span> Gestión de usuarios, roles y autenticación.</p>
+                                        <p class="cv-timeline-task"><span class="chevron">›</span> Cotizador para distribuidores y clientes.</p>
+                                        <p class="cv-timeline-task"><span class="chevron">›</span> Integración de servicios de terceros (Syntage, Buró de Crédito).</p>
+                                        <p class="cv-timeline-task"><span class="chevron">›</span> Automatización con agentes LLM usando Flowise y Gemini Flash.</p>
+                                        <p class="cv-timeline-task"><span class="chevron">›</span> Dashboard de bots inteligentes con Vue.js/Nuxt.js y Supabase.</p>
+                                        <p class="cv-timeline-task"><span class="chevron">›</span> Despliegue en AWS EKS con Docker.</p>
+                                    </div>
+                                </div>
+
+                                <!-- Job 2: Vulcanics -->
+                                <div class="cv-timeline-item">
+                                    <div class="cv-timeline-dot muted">
+                                        <div class="inner-dot"></div>
+                                    </div>
+                                    <div class="cv-timeline-header">
+                                        <div>
+                                            <div class="cv-timeline-role">Desarrollador Frontend</div>
+                                            <div class="cv-timeline-company text-amber">@ Vulcanics</div>
+                                        </div>
+                                        <span class="cv-timeline-date past">Dic 2024 – Oct 2025</span>
+                                    </div>
+                                    <div class="cv-timeline-tasks">
+                                        <p class="cv-timeline-task"><span class="chevron">›</span> Interfaces con React, Vite + TS, shadcn/ui.</p>
+                                        <p class="cv-timeline-task"><span class="chevron">›</span> Apps móviles en React Native, Kotlin y Flutter.</p>
+                                        <p class="cv-timeline-task"><span class="chevron">›</span> Integración de OpenPay y automatización con bots.</p>
+                                    </div>
+                                </div>
+
+                                <!-- Job 3: High Tech -->
+                                <div class="cv-timeline-item" style="opacity: 0.8;">
+                                    <div class="cv-timeline-dot faded">
+                                        <div class="inner-dot"></div>
+                                    </div>
+                                    <div class="cv-timeline-header">
+                                        <div>
+                                            <div class="cv-timeline-role">Becario Voluntario</div>
+                                            <div class="cv-timeline-company text-green">@ High Tech Process Counsellors</div>
+                                        </div>
+                                        <span class="cv-timeline-date old">Ago 2023 – Dic 2024</span>
+                                    </div>
+                                    <div class="cv-timeline-tasks">
+                                        <p class="cv-timeline-task"><span class="chevron">›</span> Plataformas web en React + Vite + TypeScript.</p>
+                                        <p class="cv-timeline-task"><span class="chevron">›</span> Consumo de APIs y endpoints.</p>
+                                        <p class="cv-timeline-task"><span class="chevron">›</span> Integración de pagos recurrentes con OpenPay.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Experience Section -->
-    <section id="experience" class="container">
-        <h2 class="section-title reveal">Experiencia</h2>
-        <div class="glass-card reveal">
-            <div class="timeline">
-                
-                <div class="timeline-item reveal">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-date">Oct 2025 – Presente</div>
-                    <div class="timeline-role">Desarrollador Web</div>
-                    <div class="timeline-company">@ Mako Capital</div>
-                    <p style="color: var(--text-secondary); font-size: 0.95rem;">
-                        Desarrollo de plataforma de leasing con Next.js. Gestión de usuarios, roles y autenticación. Cotizador para distribuidores y clientes. Integración de servicios de terceros (Syntage). Desarrollo de bots inteligentes con dashboard utilizando Flowise, Kaspo y backend propio.
-                    </p>
-                </div>
-
-                <div class="timeline-item reveal">
-                    <div class="timeline-dot" style="border-color: var(--text-muted);"></div>
-                    <div class="timeline-date" style="color: var(--text-muted);">Dic 2024 – Oct 2025</div>
-                    <div class="timeline-role">Desarrollador Frontend</div>
-                    <div class="timeline-company">@ Vulcanics</div>
-                    <p style="color: var(--text-secondary); font-size: 0.95rem;">
-                        Interfaces con React, Tailwind CSS, Vite + TS, shadcn/ui. Apps móviles en React Native, Kotlin y Flutter. Integración de OpenPay y automatización con bots.
-                    </p>
-                </div>
-
-                <div class="timeline-item reveal">
-                    <div class="timeline-dot" style="border-color: var(--text-muted);"></div>
-                    <div class="timeline-date" style="color: var(--text-muted);">Ago 2023 – Dic 2024</div>
-                    <div class="timeline-role">Becario Voluntario</div>
-                    <div class="timeline-company">@ High Tech Process Counsellors</div>
-                    <p style="color: var(--text-secondary); font-size: 0.95rem;">
-                        Plataformas web en React + Vite + TS. Consumo de APIs y endpoints. Integración de pagos recurrentes.
-                    </p>
-                </div>
-
             </div>
         </div>
     </section>
@@ -141,24 +268,157 @@
         
         <div class="projects-grid">
             
-            <!-- Project 0 -->
-            <div class="glass-card project-card reveal">
+            <!-- Project: Not Vibe Coding App -->
+            <div class="glass-card project-card reveal" id="project-nvc-app">
+                <span class="project-badge badge-own">Propio</span>
                 <div class="project-img-wrapper" style="background-color: var(--bg-deep); display: flex; align-items: center; justify-content: center; padding: 2rem;">
                     <img src="assets/not_vibe_coding_logo.png" alt="Not Vibe Coding" style="object-fit: contain; border-radius: 8px;">
                 </div>
                 <div class="project-content">
                     <h3 class="project-title text-purple">Not Vibe Coding</h3>
-                    <p class="project-desc">App y plataforma para dominar los fundamentos de la programación y dejar de ser un "vibe coder".</p>
+                    <p class="project-desc">App móvil para dominar los fundamentos de la programación y dejar de ser un "vibe coder". Disponible en Google Play Store.</p>
+                    <div class="tech-tags">
+                        <span class="tag">React Native</span>
+                        <span class="tag">Expo</span>
+                        <span class="tag">Firebase</span>
+                        <span class="tag">AdMob</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://play.google.com/store/apps/details?id=com.jesusmanuel.notVibeCoding" target="_blank" class="project-link">
+                            <i class="fab fa-google-play"></i> Play Store
+                        </a>
+                        <a href="https://not.konektaa.lat" target="_blank" class="project-link">
+                            <i class="fas fa-globe"></i> Landing
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project: Not Vibe Coding Landing -->
+            <div class="glass-card project-card reveal" id="project-nvc-landing">
+                <span class="project-badge badge-own">Propio</span>
+                <div class="project-img-wrapper">
+                    <img src="assets/landing_not.png" alt="Not Vibe Coding Landing">
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title text-purple">Not Vibe Coding — Landing</h3>
+                    <p class="project-desc">Landing page con diseño Terminal Glassmorphism, animaciones avanzadas con Anime.js v4 y scroll GSAP/Observer.</p>
                     <div class="tech-tags">
                         <span class="tag">Next.js</span>
                         <span class="tag">Anime.js v4</span>
                         <span class="tag">Tailwind</span>
+                        <span class="tag">shadcn/ui</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://not.konektaa.lat" target="_blank" class="project-link">
+                            <i class="fas fa-globe"></i> Visitar
+                        </a>
                     </div>
                 </div>
             </div>
-            
-            <!-- Project 1 -->
-            <div class="glass-card project-card reveal">
+
+            <!-- Project: Konekta (Portfolio/CV) -->
+            <div class="glass-card project-card reveal" id="project-konekta">
+                <span class="project-badge badge-own">Propio</span>
+                <div class="project-img-wrapper">
+                    <img src="assets/Captura de pantalla_20260504_143109.png" alt="Not Vibe Coding Features">
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title text-cyan">Konekta — Portafolio Personal</h3>
+                    <p class="project-desc">Portafolio web profesional con diseño Terminal Glassmorphism, grid animado y fondo Google Lens.</p>
+                    <div class="tech-tags">
+                        <span class="tag">HTML</span>
+                        <span class="tag">CSS</span>
+                        <span class="tag">Anime.js v4</span>
+                        <span class="tag">Vercel</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://me.konektaa.lat" target="_blank" class="project-link">
+                            <i class="fas fa-globe"></i> Visitar
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project: SafeApp -->
+            <div class="glass-card project-card reveal" id="project-safeapp">
+                <span class="project-badge badge-own">Propio</span>
+                <div class="project-img-wrapper">
+                    <img src="assets/safeapp_banner.png" alt="SafeApp">
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title text-green">SafeApp</h3>
+                    <p class="project-desc">Aplicación móvil para gestión segura de contraseñas con cifrado avanzado AES-256.</p>
+                    <div class="tech-tags">
+                        <span class="tag">Kotlin</span>
+                        <span class="tag">SQLite</span>
+                        <span class="tag">Criptografía</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://me.konektaa.lat" target="_blank" class="project-link">
+                            <i class="fas fa-info-circle"></i> Más info
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project: Flowise AI Agent -->
+            <div class="glass-card project-card reveal" id="project-flowise">
+                <span class="project-badge badge-private">Privado</span>
+                <div class="project-img-wrapper">
+                    <img src="assets/flowise.png" alt="Flowise AI Agent">
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title text-pink">Flowise — Agente LLM</h3>
+                    <p class="project-desc">Diseño e implementación de agentes inteligentes con Flowise, Gemini 2.5 Flash, orquestación por fases y sincronización con Supabase.</p>
+                    <div class="tech-tags">
+                        <span class="tag">Flowise</span>
+                        <span class="tag">Gemini Flash</span>
+                        <span class="tag">Supabase</span>
+                        <span class="tag">LLM Agents</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project: Camelia Landing -->
+            <div class="glass-card project-card reveal" id="project-camelia">
+                <span class="project-badge badge-private">Privado</span>
+                <div class="project-img-wrapper">
+                    <img src="assets/camelia_landing.png" alt="Camelia Leasing">
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title text-amber">Camelia — Plataforma de Leasing</h3>
+                    <p class="project-desc">Landing y plataforma digital para arrendamiento puro de equipos médicos, tecnología y maquinaria. 100% deducible.</p>
+                    <div class="tech-tags">
+                        <span class="tag">Next.js</span>
+                        <span class="tag">Tailwind</span>
+                        <span class="tag">Dashboard</span>
+                        <span class="tag">Leasing</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project: Dashboard Bot -->
+            <div class="glass-card project-card reveal" id="project-dashboard-bot">
+                <span class="project-badge badge-private">Privado</span>
+                <div class="project-img-wrapper">
+                    <img src="assets/dashboard_bot.png" alt="Dashboard Bot">
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title text-cyan">Dashboard de Bots IA</h3>
+                    <p class="project-desc">Panel de conversaciones con bot IA integrado, gestión de leads, llamadas WebRTC y análisis con Gemini Flash.</p>
+                    <div class="tech-tags">
+                        <span class="tag">Vue.js / Nuxt</span>
+                        <span class="tag">Supabase</span>
+                        <span class="tag">WebRTC</span>
+                        <span class="tag">Gemini</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project: Mako Capital -->
+            <div class="glass-card project-card reveal" id="project-mako">
+                <span class="project-badge badge-private">Privado</span>
                 <div class="project-img-wrapper">
                     <img src="assets/mako_two.png" alt="Mako Capital">
                 </div>
@@ -173,8 +433,9 @@
                 </div>
             </div>
 
-            <!-- Project 2 -->
-            <div class="glass-card project-card reveal">
+            <!-- Project: Vulcanics -->
+            <div class="glass-card project-card reveal" id="project-vulcanics">
+                <span class="project-badge badge-private">Privado</span>
                 <div class="project-img-wrapper">
                     <img src="assets/vulcanics_one.png" alt="Vulcanics">
                 </div>
@@ -188,8 +449,9 @@
                 </div>
             </div>
 
-            <!-- Project 3 -->
-            <div class="glass-card project-card reveal">
+            <!-- Project: BonkGames -->
+            <div class="glass-card project-card reveal" id="project-bonkgames">
+                <span class="project-badge badge-private">Privado</span>
                 <div class="project-img-wrapper">
                     <img src="assets/bonkgames_two.png" alt="BonkGames">
                 </div>
@@ -199,22 +461,6 @@
                     <div class="tech-tags">
                         <span class="tag">JavaScript</span>
                         <span class="tag">Game Dev</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Project 4 -->
-            <div class="glass-card project-card reveal">
-                <div class="project-img-wrapper">
-                    <img src="assets/safeapp_banner.png" alt="SafeApp">
-                </div>
-                <div class="project-content">
-                    <h3 class="project-title text-pink">SafeApp</h3>
-                    <p class="project-desc">Aplicación móvil para gestión segura de contraseñas con cifrado avanzado.</p>
-                    <div class="tech-tags">
-                        <span class="tag">Kotlin</span>
-                        <span class="tag">SQLite</span>
-                        <span class="tag">Crypto</span>
                     </div>
                 </div>
             </div>
@@ -250,5 +496,10 @@
     </footer>
 
     <script type="module" src="script.js"></script>
+    <!-- Vercel Analytics -->
+    <script>
+      window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+    </script>
+    <script defer src="/_vercel/insights/script.js"></script>
 </body>
 </html>
