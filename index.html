@@ -42,7 +42,7 @@
 
     <!-- Hero Section -->
     <section id="home" class="hero container">
-        <div class="hero-content reveal">
+        <div class="hero-content">
             <h1 class="hero-title">Jesús Manuel<br>Juárez Acosta</h1>
             <h2 class="hero-subtitle">
                 <span id="typing-text"></span><span class="typing-cursor"></span>
@@ -61,9 +61,9 @@
 
     <!-- CV Section (Nosotros-style glassmorphism) -->
     <section id="about" class="container">
-        <h2 class="section-title reveal">Currículum Vitae</h2>
+        <h2 class="section-title">Currículum Vitae</h2>
         
-        <div class="cv-wrapper reveal">
+        <div class="cv-wrapper">
             <div class="cv-inner">
                 <div class="cv-grid">
                     
@@ -262,216 +262,10 @@
         </div>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="container">
-        <h2 class="section-title reveal">Proyectos Destacados</h2>
-        
-        <div class="projects-grid">
-            
-            <!-- Project: Not Vibe Coding App -->
-            <div class="glass-card project-card reveal" id="project-nvc-app">
-                <span class="project-badge badge-own">Propio</span>
-                <div class="project-img-wrapper" style="background-color: var(--bg-deep); display: flex; align-items: center; justify-content: center; padding: 2rem;">
-                    <img src="assets/not_vibe_coding_logo.png" alt="Not Vibe Coding" style="object-fit: contain; border-radius: 8px;">
-                </div>
-                <div class="project-content">
-                    <h3 class="project-title text-purple">Not Vibe Coding</h3>
-                    <p class="project-desc">App móvil para dominar los fundamentos de la programación y dejar de ser un "vibe coder". Disponible en Google Play Store.</p>
-                    <div class="tech-tags">
-                        <span class="tag">React Native</span>
-                        <span class="tag">Expo</span>
-                        <span class="tag">Firebase</span>
-                        <span class="tag">AdMob</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://play.google.com/store/apps/details?id=com.jesusmanuel.notVibeCoding" target="_blank" class="project-link">
-                            <i class="fab fa-google-play"></i> Play Store
-                        </a>
-                        <a href="https://not.konektaa.lat" target="_blank" class="project-link">
-                            <i class="fas fa-globe"></i> Landing
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Project: Not Vibe Coding Landing -->
-            <div class="glass-card project-card reveal" id="project-nvc-landing">
-                <span class="project-badge badge-own">Propio</span>
-                <div class="project-img-wrapper">
-                    <img src="assets/landing_not.png" alt="Not Vibe Coding Landing">
-                </div>
-                <div class="project-content">
-                    <h3 class="project-title text-purple">Not Vibe Coding — Landing</h3>
-                    <p class="project-desc">Landing page con diseño Terminal Glassmorphism, animaciones avanzadas con Anime.js v4 y scroll GSAP/Observer.</p>
-                    <div class="tech-tags">
-                        <span class="tag">Next.js</span>
-                        <span class="tag">Anime.js v4</span>
-                        <span class="tag">Tailwind</span>
-                        <span class="tag">shadcn/ui</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://not.konektaa.lat" target="_blank" class="project-link">
-                            <i class="fas fa-globe"></i> Visitar
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Project: Konekta (Portfolio/CV) -->
-            <div class="glass-card project-card reveal" id="project-konekta">
-                <span class="project-badge badge-own">Propio</span>
-                <div class="project-img-wrapper">
-                    <img src="assets/Captura de pantalla_20260504_143109.png" alt="Not Vibe Coding Features">
-                </div>
-                <div class="project-content">
-                    <h3 class="project-title text-cyan">Konekta — Portafolio Personal</h3>
-                    <p class="project-desc">Portafolio web profesional con diseño Terminal Glassmorphism, grid animado y fondo Google Lens.</p>
-                    <div class="tech-tags">
-                        <span class="tag">HTML</span>
-                        <span class="tag">CSS</span>
-                        <span class="tag">Anime.js v4</span>
-                        <span class="tag">Vercel</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://me.konektaa.lat" target="_blank" class="project-link">
-                            <i class="fas fa-globe"></i> Visitar
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Project: SafeApp -->
-            <div class="glass-card project-card reveal" id="project-safeapp">
-                <span class="project-badge badge-own">Propio</span>
-                <div class="project-img-wrapper">
-                    <img src="assets/safeapp_banner.png" alt="SafeApp">
-                </div>
-                <div class="project-content">
-                    <h3 class="project-title text-green">SafeApp</h3>
-                    <p class="project-desc">Aplicación móvil para gestión segura de contraseñas con cifrado avanzado AES-256.</p>
-                    <div class="tech-tags">
-                        <span class="tag">Kotlin</span>
-                        <span class="tag">SQLite</span>
-                        <span class="tag">Criptografía</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://me.konektaa.lat" target="_blank" class="project-link">
-                            <i class="fas fa-info-circle"></i> Más info
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Project: Flowise AI Agent -->
-            <div class="glass-card project-card reveal" id="project-flowise">
-                <span class="project-badge badge-private">Privado</span>
-                <div class="project-img-wrapper">
-                    <img src="assets/flowise.png" alt="Flowise AI Agent">
-                </div>
-                <div class="project-content">
-                    <h3 class="project-title text-pink">Flowise — Agente LLM</h3>
-                    <p class="project-desc">Diseño e implementación de agentes inteligentes con Flowise, Gemini 2.5 Flash, orquestación por fases y sincronización con Supabase.</p>
-                    <div class="tech-tags">
-                        <span class="tag">Flowise</span>
-                        <span class="tag">Gemini Flash</span>
-                        <span class="tag">Supabase</span>
-                        <span class="tag">LLM Agents</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Project: Camelia Landing -->
-            <div class="glass-card project-card reveal" id="project-camelia">
-                <span class="project-badge badge-private">Privado</span>
-                <div class="project-img-wrapper">
-                    <img src="assets/camelia_landing.png" alt="Camelia Leasing">
-                </div>
-                <div class="project-content">
-                    <h3 class="project-title text-amber">Camelia — Plataforma de Leasing</h3>
-                    <p class="project-desc">Landing y plataforma digital para arrendamiento puro de equipos médicos, tecnología y maquinaria. 100% deducible.</p>
-                    <div class="tech-tags">
-                        <span class="tag">Next.js</span>
-                        <span class="tag">Tailwind</span>
-                        <span class="tag">Dashboard</span>
-                        <span class="tag">Leasing</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Project: Dashboard Bot -->
-            <div class="glass-card project-card reveal" id="project-dashboard-bot">
-                <span class="project-badge badge-private">Privado</span>
-                <div class="project-img-wrapper">
-                    <img src="assets/dashboard_bot.png" alt="Dashboard Bot">
-                </div>
-                <div class="project-content">
-                    <h3 class="project-title text-cyan">Dashboard de Bots IA</h3>
-                    <p class="project-desc">Panel de conversaciones con bot IA integrado, gestión de leads, llamadas WebRTC y análisis con Gemini Flash.</p>
-                    <div class="tech-tags">
-                        <span class="tag">Vue.js / Nuxt</span>
-                        <span class="tag">Supabase</span>
-                        <span class="tag">WebRTC</span>
-                        <span class="tag">Gemini</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Project: Mako Capital -->
-            <div class="glass-card project-card reveal" id="project-mako">
-                <span class="project-badge badge-private">Privado</span>
-                <div class="project-img-wrapper">
-                    <img src="assets/mako_two.png" alt="Mako Capital">
-                </div>
-                <div class="project-content">
-                    <h3 class="project-title text-cyan">Plataforma Mako Capital</h3>
-                    <p class="project-desc">Plataforma digital de leasing para arrendar equipos y gestionar cotizaciones a clientes y distribuidores.</p>
-                    <div class="tech-tags">
-                        <span class="tag">Next.js</span>
-                        <span class="tag">Dashboard</span>
-                        <span class="tag">Leasing</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Project: Vulcanics -->
-            <div class="glass-card project-card reveal" id="project-vulcanics">
-                <span class="project-badge badge-private">Privado</span>
-                <div class="project-img-wrapper">
-                    <img src="assets/vulcanics_one.png" alt="Vulcanics">
-                </div>
-                <div class="project-content">
-                    <h3 class="project-title text-amber">Vulcanics Tasks</h3>
-                    <p class="project-desc">Gestor de tareas y actividades enfocado a la productividad de equipos de desarrollo.</p>
-                    <div class="tech-tags">
-                        <span class="tag">React</span>
-                        <span class="tag">Productivity</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Project: BonkGames -->
-            <div class="glass-card project-card reveal" id="project-bonkgames">
-                <span class="project-badge badge-private">Privado</span>
-                <div class="project-img-wrapper">
-                    <img src="assets/bonkgames_two.png" alt="BonkGames">
-                </div>
-                <div class="project-content">
-                    <h3 class="project-title text-green">BonkGames</h3>
-                    <p class="project-desc">Juego de acción web con diálogos interactivos y sistema de recompensas crypto.</p>
-                    <div class="tech-tags">
-                        <span class="tag">JavaScript</span>
-                        <span class="tag">Game Dev</span>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
     <!-- Contact Section -->
     <section id="contact" class="container">
-        <h2 class="section-title reveal">Contacto</h2>
-        <div class="glass-card reveal" style="text-align: center; max-width: 600px; margin: 0 auto;">
+        <h2 class="section-title">Contacto</h2>
+        <div class="glass-card" style="text-align: center; max-width: 600px; margin: 0 auto;">
             <div style="width: 60px; height: 60px; background: rgba(130,80,203,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem;">
                 <i class="fas fa-envelope text-purple" style="font-size: 1.5rem;"></i>
             </div>

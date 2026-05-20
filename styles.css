@@ -273,15 +273,16 @@ section {
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, var(--accent-purple), #5B56DF);
-  color: white;
-  border: none;
-  box-shadow: 0 4px 15px rgba(130, 80, 203, 0.3);
+  background: var(--bg-surface);
+  color: var(--text-primary);
+  border: 1px solid var(--border-subtle);
+  box-shadow: none;
 }
 
 .btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(130, 80, 203, 0.4);
+  border-color: var(--accent-purple);
+  background: rgba(130, 80, 203, 0.1);
 }
 
 .btn-outline {

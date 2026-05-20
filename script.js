@@ -46,29 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
         setTimeout(typeWriter, 1000); // start after 1s delay
     }
 
-    // 3. Scroll Reveal Animations with Spring Physics
-    const revealElements = document.querySelectorAll('.reveal');
-    
-    const revealObserver = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const isProject = entry.target.classList.contains('project-card');
-                animate(entry.target, {
-                    translateY: [100, 0],
-                    opacity: [0, 1],
-                    ease: spring({ bounce: 0.81, duration: 628 }), // v4 spring
-                    delay: isProject ? stagger(200)(entry.target) : 0
-                });
-                observer.unobserve(entry.target);
-                entry.target.classList.remove('reveal');
-            }
-        });
-    }, {
-        threshold: 0.1,
-        rootMargin: "0px 0px -50px 0px"
-    });
-
-    revealElements.forEach(el => revealObserver.observe(el));
+    // 3. Scroll Reveal removed for a more sober look
 
     // 4. Dynamic Parallax Shapes (Google Lens Style)
     const shapes = document.querySelectorAll('.hero-shape');
