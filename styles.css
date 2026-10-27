@@ -192,13 +192,23 @@ body {
   transform: translateY(-1px);
 }
 
-.bento-avatar-img {
-  width: 34px;
-  height: 34px;
+.bento-brand-mark {
+  width: 32px;
+  height: 32px;
   border-radius: 50%;
-  object-fit: cover;
-  object-position: center 20%;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.bento-konekta-symbol {
+  width: 19px;
+  height: 19px;
+  object-fit: contain;
+  display: block;
 }
 
 .bento-avatar-name {
