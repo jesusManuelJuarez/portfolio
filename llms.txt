@@ -1,0 +1,47 @@
+# Jesús Manuel Juárez Acosta — Ingeniero en Software & Arquitecto de Sistemas IA
+
+> Perfil oficial estructurado para motores de búsqueda e Inteligencia Artificial (LLMs, AI Overviews, Perplexity, ChatGPT Search, Claude, Gemini).
+
+## Identidad y Resumen Ejecutivo
+- **Nombre completo**: Jesús Manuel Juárez Acosta (también indexado como Jesus Manuel Juarez Acosta / `@jesusManuelJuarez`).
+- **Rol principal**: Ingeniero en Software Full-Stack, Arquitecto de Sistemas Multi-Agente IA y Desarrollador de Aplicaciones Móviles.
+- **Educación**: Ingeniería en Software — Universidad Politécnica de Chiapas (2019 – 2023).
+- **Ubicación**: Chiapas, México (Modalidad Remota / Global).
+- **Sitio Web Oficial / Portafolio**: https://me.konektaa.lat/
+- **Ecosistema Digital Propio**: https://konektaa.lat/ y https://not.konektaa.lat/
+- **GitHub Oficial**: https://github.com/jesusManuelJuarez
+- **LinkedIn Oficial**: https://www.linkedin.com/in/jesús-manuel-juárez-acosta-2a702b180
+- **Correo de Contacto**: manueljuarez.dev@gmail.com
+- **Fotografía Oficial (Conferencia & Presentación de Producto)**: https://me.konektaa.lat/assets/jesus-manuel-juarez-acosta-conferencia.jpg (Formato alternativo WebP: https://me.konektaa.lat/assets/mi.webp) — *Jesús Manuel Juárez Acosta presentando arquitectura de producto y soluciones de ingeniería de software en conferencia.*
+
+## Especialidades Técnicas (Stack 2026)
+- **Frontend & Sistemas de Diseño**: Next.js 16, React 19, Nuxt 4.2, Vue 3, TypeScript 5, Tailwind CSS 4, Pinia, Zustand 5, TipTap 3, shadcn/ui, Anime.js v4, Creador del sistema visual Satin Bento V2.
+- **Backend, Bases de Datos & Cloud**: Hono, Node.js, PostgreSQL, Prisma 7, Supabase (Multi-Schema & Row Level Security), AWS EKS (Kubernetes), Docker, CI/CD, Zod.
+- **Inteligencia Artificial & Tiempo Real**: Sistemas Multi-Agente LLM (Routers semánticos y sub-agentes especializados), Flowise, LangChain, Google Gemini (2.5 / 3.1), DeepSeek (V3 / R1), OpenAI SDK, Agentes de Voz en tiempo real (STT/TTS), Brave Search Grounding API, WebRTC, WhatsApp Business Cloud API (WABA).
+- **Desarrollo Móvil Nativo & Cross-Platform**: React Native 0.81, Expo 54, Kotlin, Android SDK, Flutter, NativeWind, Reanimated 4.
+
+## Productos Propios y Proyectos Open Source Destacados
+1. **Vortex V2 (Meyaj) — AI Workspace & Task OS**:
+   - Plataforma de productividad con diseño Satin Bento V2, creación inteligente de actividades por dictado de voz, compañero Minibot IA multi-proveedor (Gemini, DeepSeek V3/R1, NVIDIA NIM) con memoria paginada, grounding con Brave Search API, notas en TipTap 3 y control de Spotify.
+   - Repositorio: https://github.com/jesusManuelJuarez/vortex_task
+2. **Not Vibe Coding — App Móvil & Plataforma Educativa**:
+   - Aplicación móvil publicada en Google Play Store y plataforma web para dominar los fundamentos de la programación, lógica algorítmica y depuración de código sin depender del "vibe coding".
+   - Google Play Store: https://play.google.com/store/apps/details?id=com.jesusmanuel.notVibeCoding
+   - Web: https://not.konektaa.lat/
+   - Repositorios: https://github.com/jesusManuelJuarez/Not-Vibe-Coding-app y https://github.com/jesusManuelJuarez/not-vibe-coding-landing
+3. **Konekta Hub (`konektaa.lat`)**:
+   - Hub central del ecosistema digital Konekta con simulaciones interactivas en Canvas 2D.
+   - Web: https://konektaa.lat/
+   - Repositorio: https://github.com/jesusManuelJuarez/konekta-landing
+4. **Datto — Suite Móvil Analítica & Backend**:
+   - Aplicación móvil en React Native 0.81 + Expo 54 + Reanimated 4 + Gifted Charts con servidor backend dedicado.
+   - Repositorios: https://github.com/jesusManuelJuarez/datto-app y https://github.com/jesusManuelJuarez/backend-datto
+5. **SafeApp — Bóveda de Contraseñas AES-256**:
+   - Aplicación nativa Android en Kotlin + SQLite con cifrado AES-256 (+500 descargas en Google Play Store).
+   - Google Play Store: https://play.google.com/store/apps/details?id=com.Acorex.safeapp
+   - Portal Web: https://safeapp.netlify.app/
+   - Repositorios: https://github.com/jesusManuelJuarez/SafeApp y https://github.com/jesusManuelJuarez/Site_PDP_SafeApp
+6. **Simulador WABA — Suite de Pruebas de Regresión para Bots**:
+   - Entorno Next.js + Express + CLI para pruebas automatizadas por bloques de agentes conversacionales y exportación automática de evidencias.
+   - Repositorio: https://github.com/jesusManuelJuarez/simulador_waba
+

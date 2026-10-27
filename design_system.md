@@ -1,203 +1,130 @@
-# Portfolio Design System — Terminal Glassmorphism
+# Portfolio Design System V2 — Vortex Satin Bento + Ambient Lens
 
-Sistema de diseño para el portafolio personal de Jesús Manuel Juárez Acosta.
-Heredado y adaptado del proyecto "Not Vibe Coding" con estética **Terminal Glassmorphism**.
-
----
-
-## 1. Vision & Aesthetic
-
-### Core Identity
-Un portafolio que se siente como una **terminal moderna premium** — oscuro, técnico, con destellos de luz neón controlada. Nada genérico, nada "template de IA". Cada sección respira y reacciona al usuario.
-
-### Principles
-- **Dark-first**: Todo vive sobre `#0E0E12`. La oscuridad es el lienzo.
-- **Monospace Identity**: JetBrains Mono para todo lo técnico. Inter para legibilidad.
-- **Glassmorphism Controlado**: Superficies semi-transparentes con blur, nunca opacas.
-- **Animación con Propósito**: Anime.js v4 para entrada de secciones, hero grid, typing. Nada gratuito.
-- **Gradientes como Firma**: Cada sección tiene un acento de color distinto.
+Sistema de diseño canónico para el portafolio profesional de **Jesús Manuel Juárez Acosta** (`me.konektaa.lat`), sincronizado al 100% con el **Directorio Canónico de UI Vortex V2 (`task_konektaa/vortex`)** mientras preserva el fondo orgánico animado estilo **Google Lens** en el lienzo base.
 
 ---
 
-## 2. Color Palette
+## 1. Filosofía Visual y Reglas de Oro (Vortex V2)
 
-### Surfaces
-| Token              | Value            | Usage                          |
-|:-------------------|:-----------------|:-------------------------------|
-| `--bg-deep`        | `#0E0E12`        | Page background                |
-| `--bg-surface`     | `#18181B`        | Cards, elevated surfaces       |
-| `--bg-glass`       | `rgba(24,24,27,0.6)` | Glassmorphism panels      |
-| `--border-subtle`  | `rgba(130,80,203,0.15)` | Default borders           |
-| `--border-hover`   | `rgba(130,80,203,0.4)` | Hover state borders        |
-
-### Brand Accents
-| Token              | Value     | Usage                              |
-|:-------------------|:----------|:-----------------------------------|
-| `--accent-purple`  | `#8250CB` | Primary CTA, nav active, hero glow |
-| `--accent-cyan`    | `#06B6D4` | Links, secondary highlights        |
-| `--accent-amber`   | `#F59E0B` | Warnings, badges, company names    |
-| `--accent-green`   | `#34D399` | Success, education, availability   |
-| `--accent-pink`    | `#FB7185` | Experience section, timeline dots  |
-| `--accent-soft`    | `#C084FC` | Soft purple for tags, labels       |
-
-### Text
-| Token              | Value     | Usage                    |
-|:-------------------|:----------|:-------------------------|
-| `--text-primary`   | `#FAFAFA` | Headings, important text |
-| `--text-secondary` | `#A1A1AA` | Body text                |
-| `--text-muted`     | `#52525B` | Labels, metadata         |
-| `--text-code`      | `#C084FC` | Code snippets, monospace |
+1. **Cero Translúcido Ruidoso en Tarjetas**:
+   - El fondo animado (`#hero-shapes` / Google Lens) vive exclusivamente en el canvas (`--bg-canvas: #0E1015`) con opacidad controlada (`0.22–0.28`).
+   - Todas las tarjetas, contenedores, modales y bloques del CV y Proyectos son **100% sólidos y satinados** (`--card-bg: #1A1C24`, sub-etapas `--stage-bg: #111218`). Esto evita que las luces de colores del fondo tiñan o ensucien la legibilidad del texto.
+2. **Microbordes de Luz y Sombra Escultórica**:
+   - Bordes perimetrales sutiles: `1px solid rgba(255, 255, 255, 0.12)` con bisel superior interno `inset 0 1px 0 rgba(255, 255, 255, 0.14)`.
+   - Cero bordes morados neón (`rgba(130, 80, 203, ...)`), cero `border-left: 4px solid` genéricos.
+3. **Cero Puntos Pulsantes Neón (`.pulse-dot`)**:
+   - Prohibido usar puntos rojos/morados con `box-shadow` neón parpadeante.
+   - Para estados en vivo ("Disponible", "Activo", "En Producción") se utilizan **Cápsulas Canónicas Bento V2** (`.bento-capsule-apple`, `.bento-capsule-sandstone`, `.bento-capsule-frosted`) o el micro-ecualizador satinado de 4 barras (`.soundwave-bars`).
+4. **Contraste Tipográfico Editorial (Two-Weight Headline)**:
+   - Combinación de **Plus Jakarta Sans** (Display `300 Light` con opacidad `0.85` + `800 ExtraBold` con kerning `-0.03em`), **Inter** (Body) y **Space Grotesk** (Monospace / Metadatos técnicos).
 
 ---
 
-## 3. Typography
+## 2. Tokens del Sistema (Variables CSS Canónicas)
 
-### Font Stack
 ```css
---font-body: 'Inter', system-ui, -apple-system, sans-serif;
---font-mono: 'JetBrains Mono', 'Fira Code', monospace;
-```
+:root {
+  /* Tipografías Oficiales Vortex V2 */
+  --font-display: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'Space Grotesk', monospace;
 
-### Scale
-| Element       | Font          | Size     | Weight | Letter Spacing | Transform |
-|:-------------|:-------------|:---------|:-------|:---------------|:----------|
-| Hero Name    | Inter         | 48-72px  | 800    | -0.02em        | —         |
-| Hero Title   | JetBrains Mono| 18-24px  | 400    | 0.1em          | —         |
-| Section H2   | Inter         | 32-48px  | 700    | -0.01em        | —         |
-| Section Label| JetBrains Mono| 11-12px  | 500    | 0.2em          | uppercase |
-| Body         | Inter         | 15-16px  | 400    | 0              | —         |
-| Small/Tags   | JetBrains Mono| 11-12px  | 400    | 0.05em         | —         |
-| Nav Links    | JetBrains Mono| 12px     | 600    | 0.15em         | uppercase |
+  /* Lienzo Base (Con soporte Google Lens Ambient) */
+  --bg-canvas: #0E1015;
+  --bg-surface: #15171F;
+  --bg-stage: #111218;
 
----
+  /* Tarjetas Sólidas Satinadas (Cero Translúcido) */
+  --card-bg: #1A1C24;
+  --card-kanban-bg: #1B1D25;
+  --card-border: 1px solid rgba(255, 255, 255, 0.12);
+  --card-border-hover: 1px solid rgba(255, 255, 255, 0.24);
+  --card-shadow: 0 32px 80px -15px rgba(0, 0, 0, 0.85), inset 0 1px 0 rgba(255, 255, 255, 0.14);
+  --card-item-shadow: 0 10px 30px rgba(0, 0, 0, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.08);
 
-## 4. Components
+  /* Cajas Internas / Stages / Inputs */
+  --input-box-bg: rgba(255, 255, 255, 0.04);
+  --input-box-border: 1px solid rgba(255, 255, 255, 0.10);
+  --input-box-focus: 1px solid rgba(255, 255, 255, 0.28);
 
-### Glass Card
-```css
-.glass-card {
-  background: rgba(24, 24, 27, 0.6);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(130, 80, 203, 0.15);
-  border-radius: 24px;
-  transition: border-color 0.4s ease, box-shadow 0.4s ease;
-}
-.glass-card:hover {
-  border-color: rgba(130, 80, 203, 0.4);
-  box-shadow: 0 0 30px rgba(130, 80, 203, 0.08);
-}
-```
+  /* Textos Canónicos */
+  --text-main: #FFFFFF;
+  --text-muted: #A89893;
+  --text-subtle: #727682;
 
-### Gradient Border (Hollow Icon)
-```css
-.gradient-border {
-  background: linear-gradient(135deg, var(--from), var(--to));
-  padding: 2px;
-  border-radius: 16px;
-}
-.gradient-border-inner {
-  background: #0E0E12;
-  border-radius: 14px;
-  width: 100%;
-  height: 100%;
-}
-```
+  /* Botón Insignia Marfil (Light Action Pill) */
+  --pill-light-bg: #EAE5DE;
+  --pill-light-hover: #FFFFFF;
+  --pill-light-text: #141518;
 
-### Badge / Tag
-```css
-.tag {
-  font-family: var(--font-mono);
-  font-size: 11px;
-  padding: 4px 10px;
-  border-radius: 6px;
-  background: rgba(130, 80, 203, 0.1);
-  border: 1px solid rgba(130, 80, 203, 0.2);
-  color: #C084FC;
-}
-```
+  /* Cápsula Sandstone */
+  --capsule-sandstone-bg: #E6E4DD;
+  --capsule-sandstone-text: #141518;
 
-### Timeline Dot
-```css
-.timeline-dot {
-  width: 14px;
-  height: 14px;
-  border-radius: 50%;
-  border: 2px solid var(--accent-purple);
-  background: #0E0E12;
-  position: relative;
-}
-.timeline-dot::after {
-  content: '';
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: var(--accent-purple);
-  box-shadow: 0 0 10px var(--accent-purple);
+  /* Acentos Funcionales Controlados (Solo para Icon Boxes y Nodos Lens) */
+  --accent-coral: #F43F5E;
+  --accent-amber: #F2A42B;
+  --accent-emerald: #10B981;
+  --accent-blue: #38BDF8;
+
+  /* Radios Escultóricos */
+  --radius-modal: 28px;
+  --radius-card: 20px;
+  --radius-module: 14px;
+  --radius-pill: 9999px;
+
+  /* Transición Canónica */
+  --transition-smooth: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
 }
 ```
 
 ---
 
-## 5. Animation System (Anime.js v4)
+## 3. Catálogo de Componentes Atómicos (Sincronizados con `ui-system-directory.html`)
 
-### Hero Grid
-- Hundreds of `50x50` blocks covering the viewport
-- `animate()` with `stagger()` from center, wave pattern
-- Repeats every 8-10s from random origin
-- Opacity range: `0.03` → `0.4` → `0.03`
+### 3.1. Top Dock Bar Flotante (`.top-dock-bar`)
+Reemplaza el `<nav>` de ancho completo por el dock flotante superior en forma de píldora:
+- `position: sticky; top: 16px; z-index: 1000;`
+- `border-radius: var(--radius-pill); background: rgba(22, 24, 32, 0.95); border: 1px solid rgba(255, 255, 255, 0.12);`
+- Izquierda: `.brand-chip` (`#FFFFFF`, texto `#121316`, `font-weight: 900`) + `.brand-title` (`JM // SOFTWARE ENGINEER`).
+- Centro: `.nav-pills` (`background: rgba(0,0,0,0.4)`, `padding: 3px`) con `.nav-pill-btn` y estado `.active` (`background: #FFFFFF; color: #121316`).
+- Derecha: Indicador o acción rápida a GitHub/Contacto.
 
-### Section Reveals
-- `IntersectionObserver` triggers `animate()` per section
-- Entry: `translateY: [40, 0]`, `opacity: [0, 1]`, `ease: outExpo`, `duration: 800`
-- Stagger children with `stagger(80)`
+### 3.2. Encabezado Hero Editorial (`.bento-hero-headline`)
+- Fórmula tipográfica **Two-Weight**:
+  - `<span class="light">Ingeniero en Software · </span>` (`font-weight: 300; opacity: 0.85`)
+  - `<span class="bold">Jesús Manuel Juárez</span>` (`font-weight: 800; color: #FFFFFF`)
+- Subtítulo y metadatos con `.bento-date-badge` y `.soundwave-bars` satinado.
 
-### Skill Bars
-- On intersection: `animate('.skill-fill', { width: [0, target], duration: 1200, ease: 'outExpo', delay: stagger(100) })`
+### 3.3. Botón Insignia con Chevron Bubble (`.btn-estructurar-ia`)
+- **Variante Principal (Marfil Satinado)**:
+  - `height: 44px; padding: 0 8px 0 20px; border-radius: 9999px; background: #EAE5DE; color: #141518; font-weight: 800;`
+  - Incluye `.chevron-bubble` circular (`28x28px`, `background: #141518; color: #FFFFFF`) que se desplaza `translateX(2px)` en `:hover`.
+- **Variante Oscura (`.dark-variant`)**:
+  - `background: #1A1C24; color: #FFFFFF; border: 1px solid rgba(255, 255, 255, 0.16);` con `.chevron-bubble` invertida (`background: #FFFFFF; color: #121316`).
 
-### Typing Effect
-- Pure JS character-by-character reveal
-- Blinking cursor `|` with CSS `animation: blink 1s steps(1) infinite`
+### 3.4. Cápsulas de Estado Canónicas y Micro-Tags
+1. **`.bento-capsule-apple`**: Fondo `#FFFFFF`, texto `#141518`, con `.capsule-icon-circle` (`14x14px` negro con `✓` o icono). Ideal para proyectos `En Producción` / `Propio` / `Actual`.
+2. **`.bento-capsule-sandstone`**: Fondo `#E6E4DD`, texto `#141518`, `font-weight: 800`. Ideal para destacar roles clave o `Enterprise Architecture`.
+3. **`.bento-capsule-frosted`**: Fondo `#16181F`, borde `rgba(255,255,255,0.14)`, texto `#FFFFFF`. Ideal para `Privado · NDA` o fases técnicas.
+4. **`.bento-micro-tag`**: Píldora compacta (`rgba(255,255,255,0.06)`, borde `rgba(255,255,255,0.12)`, `0.70rem`, `font-weight: 700`) para stack tecnológico (`NEXT.JS 16`, `HONO`, `AWS EKS`, `FLOWISE`, `GEMINI`).
 
----
+### 3.5. Selector Segmentado (`.bento-pill-switcher`)
+- Contenedor píldora (`background: rgba(255, 255, 255, 0.05); padding: 3px; border-radius: 9999px`) con botones `.switcher-item` y estado `.active` (`background: #FFFFFF; color: #121316`).
+- Usado para filtrar el catálogo de proyectos (`Todos`, `IA & Enterprise`, `Product & Web`, `Mobile & Open Source`).
 
-## 6. Layout & Spacing
-
-| Token         | Value  | Usage                 |
-|:-------------|:-------|:----------------------|
-| `--space-xs` | `4px`  | Tight gaps            |
-| `--space-sm` | `8px`  | Tag padding           |
-| `--space-md` | `16px` | Card padding          |
-| `--space-lg` | `32px` | Section gaps          |
-| `--space-xl` | `64px` | Section vertical pad  |
-| `--space-2xl`| `120px`| Hero padding          |
-| `--radius-sm`| `8px`  | Tags, small elements  |
-| `--radius-md`| `16px` | Buttons               |
-| `--radius-lg`| `24px` | Cards                 |
-| `--radius-xl`| `32px` | Hero containers       |
-
-### Breakpoints
-| Name    | Value    |
-|:--------|:---------|
-| Mobile  | `< 640px` |
-| Tablet  | `640-1024px` |
-| Desktop | `> 1024px` |
-
-### Max Width
-- Content: `1100px`
-- Text blocks: `680px`
+### 3.6. Item de Menú / Contacto con Icon Box (`.menu-crear-btn` + `.menu-icon-box`)
+- Reemplaza los enlaces planos y los caracteres ASCII (`~`, `I`, `#`) del CV por tarjetas interactivas con `.menu-icon-box` (`32x32px`, `border-radius: 10px`, fondo tonal sutil con icono SVG limpio), título `0.84rem` bold y subtítulo `0.70rem` en `--text-muted`.
 
 ---
 
-## 7. Iconography
-- **No emoji** — use Font Awesome 6 icons
-- Terminal symbols for decorative use: `❯`, `λ`, `⟐`
-- Social: GitHub, LinkedIn, WhatsApp icons from FA
+## 4. Reglas de Privacidad, Seguridad y Gobernanza de Datos (OpSec)
 
----
-
-## 8. Scroll & Navigation
-- **Smooth scroll**: `scroll-behavior: smooth`
-- **Scroll progress bar**: Fixed top, gradient purple, tracks `scrollY / scrollHeight`
-- **Scroll-to-top**: Appears after 500px scroll, glass card style
-- **Navbar**: Fixed, glassmorphism, hides on scroll-down / shows on scroll-up
+1. **Protección de Datos Personales (PII)**:
+   - Nunca publicar dirección domiciliaria física (calle/número/colonia). Mostrar únicamente `Chiapas, México · Remoto / Global`.
+   - Evitar exponer números telefónicos personales crudos en el HTML público si no es estrictamente deseado; priorizar canales verificados (`mailto:manueljuarez.dev@gmail.com`, LinkedIn, GitHub y dominios `*.konektaa.lat`).
+2. **Protección de Propiedad Intelectual y Clientes (NDA / Repositorios Privados)**:
+   - Los proyectos corporativos y de consultoría enterprise **NO** deben incluir enlaces a repositorios privados de organizaciones, ni exponer nombres comerciales confidenciales, URLs de APIs internas, esquemas de base de datos, nombres de tablas sensibles, identificadores reales o teléfonos de prueba.
+   - Se documentan mediante **Arquitectura de Alto Nivel y Logros de Ingeniería** (ej. *"Orquestación de agentes de voz y mensajería de alta concurrencia con candados de idempotencia distribuida, validación estructural XML y escaneo DevSecOps"*), acompañados de la cápsula `.bento-capsule-frosted` (`Privado · Arquitectura NDA`).
+3. **Enlaces Públicos Verificados**:
+   - Solo enlazar a despliegues públicos autorizados (`https://konektaa.lat`, `https://not.konektaa.lat`, `https://me.konektaa.lat`, Google Play Store) y repositorios públicos bajo `https://github.com/jesusManuelJuarez`.

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://me.konektaa.lat/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://me.konektaa.lat/assets/jesus-manuel-juarez-acosta-conferencia.jpg</image:loc>
+      <image:title>Jesús Manuel Juárez Acosta — Ingeniero en Software en conferencia</image:title>
+      <image:caption>Jesús Manuel Juárez Acosta, Ingeniero en Software y creador del ecosistema Konekta, presentando producto y arquitectura de software.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://me.konektaa.lat/assets/mi.webp</image:loc>
+      <image:title>Jesús Manuel Juárez Acosta — Presentación de Producto y Software</image:title>
+      <image:caption>Fotografía de Jesús Manuel Juárez Acosta impartiendo conferencia de desarrollo de software y tecnología.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://me.konektaa.lat/assets/landing_not.png</image:loc>
+      <image:title>Not Vibe Coding — Plataforma creada por Jesús Manuel Juárez Acosta</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://me.konektaa.lat/llms.txt</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+</urlset>
+
