@@ -8,17 +8,19 @@
     <priority>1.0</priority>
     <image:image>
       <image:loc>https://me.konektaa.lat/assets/jesus-manuel-juarez-acosta-conferencia.jpg</image:loc>
-      <image:title>Jesús Manuel Juárez Acosta — Ingeniero en Software en conferencia</image:title>
-      <image:caption>Jesús Manuel Juárez Acosta, Ingeniero en Software y creador del ecosistema Konekta, presentando producto y arquitectura de software.</image:caption>
+      <image:title>Jesús Manuel Juárez Acosta — Presentación de proyectos integradores</image:title>
+      <image:caption>Jesús Manuel Juárez Acosta en presentación de proyectos integradores en la Universidad Politécnica de Chiapas, Suchiapa, Chiapas.</image:caption>
+      <image:geo_location>Suchiapa, Chiapas, México</image:geo_location>
     </image:image>
     <image:image>
       <image:loc>https://me.konektaa.lat/assets/mi.webp</image:loc>
-      <image:title>Jesús Manuel Juárez Acosta — Presentación de Producto y Software</image:title>
-      <image:caption>Fotografía de Jesús Manuel Juárez Acosta impartiendo conferencia de desarrollo de software y tecnología.</image:caption>
+      <image:title>Jesús Manuel Juárez Acosta — Universidad Politécnica de Chiapas</image:title>
+      <image:caption>Jesús Manuel Juárez Acosta en presentación de proyectos integradores en la Universidad Politécnica de Chiapas, Suchiapa, Chiapas.</image:caption>
+      <image:geo_location>Suchiapa, Chiapas, México</image:geo_location>
     </image:image>
     <image:image>
       <image:loc>https://me.konektaa.lat/assets/landing_not.png</image:loc>
-      <image:title>Not Vibe Coding — Plataforma creada por Jesús Manuel Juárez Acosta</image:title>
+      <image:title>Not Vibe Coding — Aplicación y plataforma creada por Jesús Manuel Juárez Acosta</image:title>
     </image:image>
   </url>
   <url>
@@ -28,4 +30,3 @@
     <priority>0.9</priority>
   </url>
 </urlset>
-

@@ -1,6 +1,6 @@
 /* ==========================================================================
    VORTEX V2 DESIGN SYSTEM — PORTFOLIO EDITION (SATIN BENTO + AMBIENT LENS)
-   Cero Translúcido en Tarjetas, Superficies Satinadas Opacas, Alto Contraste
+   Superficies Satinadas Opacas, Alto Contraste, Cero Ruido Visual
    ========================================================================== */
 
 :root {
@@ -31,7 +31,7 @@
   --text-muted: #A89893;
   --text-subtle: #727682;
 
-  /* Botón Principal Estructurar con IA (Marfil Satinado) */
+  /* Botón Principal (Marfil Satinado) */
   --pill-light-bg: #EAE5DE;
   --pill-light-hover: #FFFFFF;
   --pill-light-text: #141518;
@@ -130,7 +130,7 @@ body {
 /* Contenedor Maestro */
 .app-wrapper {
   width: 100%;
-  max-width: 1380px;
+  max-width: 1320px;
   display: flex;
   flex-direction: column;
   gap: 56px;
@@ -139,66 +139,86 @@ body {
 }
 
 /* ==========================================================================
-   2. TOP DOCK BAR & NAVEGACIÓN CANÓNICA
+   2. HEADER SUPERIOR FLOTANTE SUELTO (VORTEX V2 — CADA ELEMENTO CON SU FONDO)
    ========================================================================== */
-.top-dock-bar {
+.bento-topbar-floating {
   position: sticky;
   top: 16px;
   z-index: 1000;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 16px;
-  padding: 10px 22px;
-  border-radius: var(--radius-pill);
-  background: rgba(22, 24, 32, 0.96);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.65), inset 0 1px 0 rgba(255, 255, 255, 0.12);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
+  gap: 12px;
+  width: 100%;
+  padding: 4px 0;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  pointer-events: none;
 }
 
-.brand-group {
+.bento-topbar-floating > * {
+  pointer-events: auto;
+}
+
+.topbar-left-group,
+.topbar-center-group,
+.topbar-right-group {
   display: flex;
   align-items: center;
   gap: 10px;
-  text-decoration: none;
+  flex-wrap: wrap;
 }
 
-.brand-chip {
-  padding: 4px 12px;
+/* Píldora de Usuario Individual (.bento-avatar-pill de Vortex V2) */
+.bento-avatar-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 5px 16px 5px 5px;
   border-radius: var(--radius-pill);
-  background: #FFFFFF;
-  color: #121316;
-  font-family: var(--font-display);
-  font-size: 0.72rem;
-  font-weight: 900;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
+  background: rgba(22, 24, 32, 0.92);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.14);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  color: #FFFFFF;
+  text-decoration: none;
+  transition: var(--transition-smooth);
 }
 
-.brand-title {
+.bento-avatar-pill:hover {
+  border-color: rgba(255, 255, 255, 0.28);
+  transform: translateY(-1px);
+}
+
+.bento-avatar-img {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center 20%;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.bento-avatar-name {
   font-family: var(--font-display);
-  font-weight: 800;
-  font-size: 0.94rem;
+  font-size: 0.84rem;
+  font-weight: 700;
   color: #FFFFFF;
   letter-spacing: -0.01em;
 }
 
-.nav-pills {
-  display: flex;
-  background: rgba(0, 0, 0, 0.45);
-  padding: 3px;
-  border-radius: var(--radius-pill);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  gap: 4px;
-}
-
+/* Píldoras de Navegación Sueltas (Cada una con su propio background) */
 .nav-pill-btn {
-  padding: 7px 18px;
+  height: 42px;
+  padding: 0 18px;
   border-radius: var(--radius-pill);
-  border: none;
-  background: transparent;
+  background: rgba(22, 24, 32, 0.92);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.42), inset 0 1px 0 rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
   color: var(--text-muted);
   font-family: var(--font-display);
   font-size: 0.82rem;
@@ -213,18 +233,41 @@ body {
 
 .nav-pill-btn:hover {
   color: #FFFFFF;
+  border-color: rgba(255, 255, 255, 0.26);
+  transform: translateY(-1px);
 }
 
 .nav-pill-btn.active {
   background: #FFFFFF;
   color: #121316;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
+  border-color: #FFFFFF;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.5);
 }
 
-.dock-right-status {
-  display: flex;
+/* Botones Circulares Sueltos (.bento-icon-btn-circle de Vortex V2) */
+.bento-icon-btn-circle {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: rgba(22, 24, 32, 0.92);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.14);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  display: inline-flex;
   align-items: center;
-  gap: 10px;
+  justify-content: center;
+  color: #FFFFFF;
+  text-decoration: none;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+
+.bento-icon-btn-circle:hover {
+  background: #FFFFFF;
+  color: #121316;
+  border-color: #FFFFFF;
+  transform: translateY(-2px);
 }
 
 /* ==========================================================================
@@ -242,10 +285,10 @@ body {
 
 .header-section h2 {
   font-family: var(--font-display);
-  font-size: 1.85rem;
-  font-weight: 900;
+  font-size: 1.75rem;
+  font-weight: 800;
   letter-spacing: -0.03em;
-  margin-bottom: 6px;
+  margin-bottom: 4px;
   color: #FFFFFF;
 }
 
@@ -255,33 +298,33 @@ body {
   line-height: 1.45;
 }
 
-/* Encabezado Editorial Hero / Dashboard (Two-Weight Headline) */
+/* Encabezado Editorial Hero (Two-Weight Headline) */
 .bento-hero-headline {
   font-family: var(--font-display);
-  font-size: clamp(2.2rem, 4.5vw, 3.6rem);
-  line-height: 1.08;
+  font-size: clamp(2.1rem, 4.2vw, 3.3rem);
+  line-height: 1.1;
   letter-spacing: -0.035em;
   color: #FFFFFF;
   margin: 0;
 }
 
 .bento-hero-headline .light {
-  font-weight: 300;
-  opacity: 0.85;
-  color: #FFFFFF;
+  font-weight: 400;
+  opacity: 0.82;
+  color: #EAE5DE;
   display: block;
-  font-size: clamp(1.35rem, 2.5vw, 2rem);
+  font-size: clamp(1.15rem, 2vw, 1.55rem);
   margin-bottom: 6px;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.015em;
 }
 
 .bento-hero-headline .bold {
-  font-weight: 900;
+  font-weight: 800;
   color: #FFFFFF;
 }
 
 .bento-hero-subtitle {
-  font-size: 0.98rem;
+  font-size: 0.96rem;
   font-weight: 400;
   color: var(--text-muted);
   line-height: 1.65;
@@ -290,7 +333,7 @@ body {
 
 .typo-modal-title {
   font-family: var(--font-display);
-  font-size: 1.35rem;
+  font-size: 1.28rem;
   font-weight: 800;
   color: #FFFFFF;
   letter-spacing: -0.02em;
@@ -312,9 +355,10 @@ body {
 }
 
 .typo-meta-sub {
-  font-family: var(--font-mono);
-  font-size: 0.72rem;
-  color: var(--text-subtle);
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--text-muted);
 }
 
 /* ==========================================================================
@@ -323,21 +367,21 @@ body {
 .grid-3-columns {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
+  gap: 22px;
 }
 
 .cv-bento-grid {
   display: grid;
-  grid-template-columns: 380px 1fr;
-  gap: 28px;
+  grid-template-columns: 370px 1fr;
+  gap: 26px;
   align-items: start;
 }
 
 /* Grid de Presentación Personal & Fotografía Editorial (Sobre Mí) */
 .presentation-bento-grid {
   display: grid;
-  grid-template-columns: 420px 1fr;
-  gap: 28px;
+  grid-template-columns: 380px 1fr;
+  gap: 26px;
   align-items: stretch;
 }
 
@@ -348,82 +392,63 @@ body {
   padding: 14px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  gap: 14px;
+  gap: 12px;
   box-shadow: var(--card-item-shadow);
 }
 
 .speaker-figure {
   position: relative;
   width: 100%;
-  height: 430px;
+  height: 100%;
+  min-height: 390px;
   border-radius: var(--radius-module);
   overflow: hidden;
   border: 1px solid rgba(255, 255, 255, 0.10);
   background: #0B0C10;
   margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 
 .speaker-figure img {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 22%;
+  object-position: center 20%;
   display: block;
   transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .speaker-portrait-card:hover .speaker-figure img {
-  transform: scale(1.03);
+  transform: scale(1.02);
 }
 
 .speaker-figure-overlay {
-  position: absolute;
-  inset: auto 0 0 0;
-  padding: 28px 16px 14px;
-  background: linear-gradient(to top, rgba(14, 16, 21, 0.96) 0%, rgba(14, 16, 21, 0.68) 60%, transparent 100%);
+  position: relative;
+  z-index: 2;
+  padding: 36px 18px 16px;
+  background: linear-gradient(to top, rgba(14, 16, 21, 0.96) 0%, rgba(14, 16, 21, 0.72) 65%, transparent 100%);
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 4px;
+}
+
+.speaker-caption-title {
+  font-family: var(--font-display);
+  font-size: 0.92rem;
+  font-weight: 800;
+  color: #FFFFFF;
+  line-height: 1.3;
 }
 
 .speaker-figcaption {
-  font-size: 0.75rem;
-  color: rgba(255, 255, 255, 0.88);
+  font-size: 0.78rem;
+  color: rgba(255, 255, 255, 0.78);
   line-height: 1.4;
   font-weight: 500;
-}
-
-.speaker-stats-row {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 8px;
-}
-
-.speaker-stat-pill {
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 12px;
-  padding: 10px 8px;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-}
-
-.speaker-stat-value {
-  font-family: var(--font-display);
-  font-size: 0.96rem;
-  font-weight: 900;
-  color: #FFFFFF;
-}
-
-.speaker-stat-label {
-  font-family: var(--font-mono);
-  font-size: 0.64rem;
-  color: var(--text-muted);
-  text-transform: uppercase;
-  letter-spacing: 0.03em;
 }
 
 .column-block {
@@ -442,7 +467,7 @@ body {
 
 .column-title {
   font-family: var(--font-display);
-  font-size: 0.94rem;
+  font-size: 0.96rem;
   font-weight: 800;
   color: #FFFFFF;
   letter-spacing: -0.01em;
@@ -451,19 +476,8 @@ body {
   gap: 8px;
 }
 
-.column-count {
-  font-family: var(--font-mono);
-  font-size: 0.70rem;
-  font-weight: 700;
-  color: var(--text-muted);
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  padding: 2px 10px;
-  border-radius: var(--radius-pill);
-}
-
 /* ==========================================================================
-   5. TARJETAS Y CONTENEDORES SÓLIDOS SATINADOS (CERO TRANSLÚCIDO)
+   5. TARJETAS Y CONTENEDORES SÓLIDOS SATINADOS
    ========================================================================== */
 .modal-crear-card-full {
   background: var(--card-bg);
@@ -501,19 +515,12 @@ body {
 
 .ui-item-label {
   font-family: var(--font-display);
-  font-size: 0.86rem;
+  font-size: 0.90rem;
   font-weight: 800;
   color: #FFFFFF;
   display: flex;
   align-items: center;
   gap: 8px;
-}
-
-.ui-item-tag {
-  font-family: var(--font-mono);
-  font-size: 0.68rem;
-  color: var(--text-muted);
-  letter-spacing: 0.02em;
 }
 
 .ui-item-stage {
@@ -555,7 +562,7 @@ body {
 /* Preview / Stage Visual de Proyecto */
 .project-stage-preview {
   width: 100%;
-  height: 168px;
+  height: 156px;
   border-radius: var(--radius-module);
   background: var(--bg-stage);
   border: 1px solid rgba(255, 255, 255, 0.08);
@@ -581,7 +588,7 @@ body {
   padding: 18px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: flex-start;
   background: radial-gradient(circle at 100% 0%, rgba(255, 255, 255, 0.05) 0%, transparent 70%), #111218;
 }
@@ -590,10 +597,10 @@ body {
    6. BOTONES, CÁPSULAS, SWITCHERS Y COMPONENTES ATÓMICOS VORTEX V2
    ========================================================================== */
 
-/* Botón Insignia: Estructurar con IA (Marfil Satinado + Chevron Bubble) */
+/* Botón Insignia (Marfil Satinado + Chevron Bubble) */
 .btn-estructurar-ia {
-  height: 44px;
-  padding: 0 8px 0 20px;
+  height: 42px;
+  padding: 0 8px 0 18px;
   border-radius: var(--radius-pill);
   background: var(--pill-light-bg);
   color: var(--pill-light-text);
@@ -618,8 +625,8 @@ body {
 }
 
 .btn-estructurar-ia .chevron-bubble {
-  width: 28px;
-  height: 28px;
+  width: 26px;
+  height: 26px;
   border-radius: 50%;
   background: #141518;
   color: #FFFFFF;
@@ -659,7 +666,7 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.12);
   color: #FFFFFF;
   font-family: var(--font-display);
-  font-size: 0.75rem;
+  font-size: 0.76rem;
   font-weight: 700;
   display: inline-flex;
   align-items: center;
@@ -687,57 +694,7 @@ body {
   background: #FFFFFF;
 }
 
-/* Botón Dictar / Estado en Vivo Satinado */
-.btn-voice-dictate {
-  height: 34px;
-  padding: 0 14px;
-  border-radius: var(--radius-pill);
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  color: #FFFFFF;
-  font-size: 0.76rem;
-  font-weight: 700;
-  font-family: var(--font-body);
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.btn-voice-dictate.active {
-  background: var(--pill-light-bg);
-  border: 1px solid rgba(255, 255, 255, 0.45);
-  color: var(--pill-light-text);
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
-  font-weight: 800;
-}
-
-/* Micro-Ecualizador de Ondas Satinadas (Reemplazo canónico del dot pulsante) */
-.soundwave-bars {
-  display: inline-flex;
-  align-items: center;
-  gap: 2.5px;
-  height: 14px;
-}
-
-.soundwave-bars span {
-  display: inline-block;
-  width: 2.5px;
-  background: currentColor;
-  border-radius: 2px;
-  animation: soundwave-eq 0.75s ease-in-out infinite alternate;
-}
-
-.soundwave-bars span:nth-child(1) { height: 5px; animation-delay: 0.1s; }
-.soundwave-bars span:nth-child(2) { height: 13px; animation-delay: 0.35s; }
-.soundwave-bars span:nth-child(3) { height: 7px; animation-delay: 0.55s; }
-.soundwave-bars span:nth-child(4) { height: 11px; animation-delay: 0.2s; }
-
-@keyframes soundwave-eq {
-  0% { height: 4px; opacity: 0.45; }
-  100% { height: 14px; opacity: 1; }
-}
-
-/* Cápsulas de Estado Canónicas Bento V2 */
+/* Cápsulas de Periodo / Fecha (Uso exclusivo donde aportan información real) */
 .bento-capsule-apple {
   display: inline-flex;
   align-items: center;
@@ -752,19 +709,6 @@ body {
   font-weight: 800;
   color: #141518;
   white-space: nowrap;
-}
-
-.bento-capsule-apple .capsule-icon-circle {
-  width: 14px;
-  height: 14px;
-  border-radius: 50%;
-  background: #141518;
-  color: #FFFFFF;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 9px;
-  flex-shrink: 0;
 }
 
 .bento-capsule-sandstone {
@@ -794,18 +738,18 @@ body {
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.08);
   font-family: var(--font-display);
   font-size: 0.72rem;
-  font-weight: 800;
+  font-weight: 700;
   color: #FFFFFF;
   white-space: nowrap;
 }
 
-/* Metadatos y Micro-Tags Canónicos */
+/* Metadatos y Tags de Tecnologías (Sin ALL CAPS) */
 .bento-date-badge {
   display: inline-flex;
   align-items: center;
   gap: 6px;
   font-size: 0.76rem;
-  font-weight: 600;
+  font-weight: 500;
   color: var(--text-muted);
   font-family: var(--font-body);
 }
@@ -816,19 +760,20 @@ body {
   gap: 5px;
   padding: 4px 10px;
   border-radius: var(--radius-pill);
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  color: #FFFFFF;
-  font-family: var(--font-display);
-  font-size: 0.70rem;
-  font-weight: 700;
-  letter-spacing: 0.02em;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  color: rgba(255, 255, 255, 0.9);
+  font-family: var(--font-body);
+  font-size: 0.73rem;
+  font-weight: 600;
+  letter-spacing: 0;
+  text-transform: none;
   transition: var(--transition-smooth);
 }
 
 .bento-micro-tag:hover {
-  background: rgba(255, 255, 255, 0.12);
-  border-color: rgba(255, 255, 255, 0.24);
+  background: rgba(255, 255, 255, 0.10);
+  border-color: rgba(255, 255, 255, 0.22);
 }
 
 /* Selector Segmentado Bento (Pill Switcher) */
@@ -967,7 +912,7 @@ body {
   padding: 16px;
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 10px;
   transition: var(--transition-smooth);
 }
 
@@ -1010,7 +955,7 @@ body {
   align-items: center;
   flex-wrap: wrap;
   gap: 16px;
-  font-size: 0.78rem;
+  font-size: 0.80rem;
   color: var(--text-muted);
 }
 
@@ -1026,7 +971,7 @@ body {
     grid-template-columns: 1fr;
   }
   .speaker-figure {
-    height: 380px;
+    min-height: 360px;
   }
 }
 
@@ -1034,14 +979,18 @@ body {
   body {
     padding: 12px 14px 80px;
   }
-  .top-dock-bar {
+  .bento-topbar-floating {
     flex-wrap: wrap;
     justify-content: center;
-    border-radius: 22px;
-    padding: 12px 16px;
+    gap: 8px;
   }
-  .dock-right-status {
+  .topbar-right-group {
     display: none;
+  }
+  .nav-pill-btn {
+    height: 38px;
+    padding: 0 14px;
+    font-size: 0.78rem;
   }
   .grid-3-columns {
     grid-template-columns: 1fr;

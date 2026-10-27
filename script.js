@@ -1,6 +1,6 @@
 import { animate } from 'animejs';
 
-// 1. Toast Notification System (Canonical Vortex V2)
+// 1. Toast Notification System
 let toastTimeout = null;
 export function showNotification(msg) {
   const toast = document.getElementById('toast');
@@ -11,7 +11,7 @@ export function showNotification(msg) {
   toastTimeout = setTimeout(() => toast.classList.remove('show'), 2400);
 }
 
-// 2. Copy Email Helper (OpSec Safe Direct Contact)
+// 2. Copy Email Helper
 export function copyEmailToClipboard() {
   const email = 'manueljuarez.dev@gmail.com';
   if (navigator.clipboard && navigator.clipboard.writeText) {
@@ -25,7 +25,7 @@ export function copyEmailToClipboard() {
   }
 }
 
-// 3. Bento Pill Switcher — Filter Projects
+// 3. Filter Projects
 export function filterProjects(category, btnElement) {
   if (btnElement && btnElement.parentElement) {
     btnElement.parentElement.querySelectorAll('.switcher-item').forEach((btn) => {
@@ -43,58 +43,11 @@ export function filterProjects(category, btnElement) {
       card.style.display = 'none';
     }
   });
-
-  const labels = {
-    all: 'Mostrando todos los proyectos (9)',
-    own: 'Mostrando proyectos propios y Open Source (6)',
-    enterprise: 'Mostrando arquitecturas IA bajo NDA (3)'
-  };
-  if (labels[category]) {
-    showNotification(labels[category]);
-  }
-}
-
-// Expose interactive handlers for inline onclick attributes
-export function highlightAboutCard(facet, btnElement) {
-  if (btnElement && btnElement.parentElement) {
-    btnElement.parentElement.querySelectorAll('.switcher-item').forEach((btn) => {
-      btn.classList.remove('active');
-    });
-    btnElement.classList.add('active');
-  }
-
-  const cards = document.querySelectorAll('.about-facet-card');
-  cards.forEach((card) => {
-    const cardFacet = card.getAttribute('data-facet');
-    if (facet === 'all') {
-      card.style.opacity = '1';
-      card.style.borderColor = 'rgba(255, 255, 255, 0.12)';
-      card.style.transform = 'none';
-    } else if (cardFacet === facet) {
-      card.style.opacity = '1';
-      card.style.borderColor = 'rgba(255, 255, 255, 0.32)';
-      card.style.transform = 'translateY(-2px)';
-    } else {
-      card.style.opacity = '0.45';
-      card.style.borderColor = 'rgba(255, 255, 255, 0.06)';
-      card.style.transform = 'none';
-    }
-  });
-
-  const facetLabels = {
-    all: 'Mostrando presentación completa',
-    story: 'Destacando: Trayectoria & Presentación de Producto',
-    philosophy: 'Destacando: Filosofía de Ingeniería Zero Vibe Coding'
-  };
-  if (facetLabels[facet]) {
-    showNotification(facetLabels[facet]);
-  }
 }
 
 window.showNotification = showNotification;
 window.copyEmailToClipboard = copyEmailToClipboard;
 window.filterProjects = filterProjects;
-window.highlightAboutCard = highlightAboutCard;
 
 document.addEventListener('DOMContentLoaded', () => {
   // 4. Google Lens Ambient Background Orbs (Anime.js v4)
@@ -120,9 +73,9 @@ document.addEventListener('DOMContentLoaded', () => {
     animateShape(shape);
   });
 
-  // 5. Top Dock Bar Active Pill on Scroll
+  // 5. Floating Topbar Active Pill on Scroll
   const sections = document.querySelectorAll('section[id]');
-  const navButtons = document.querySelectorAll('.nav-pills .nav-pill-btn');
+  const navButtons = document.querySelectorAll('.bento-topbar-floating .nav-pill-btn');
 
   const updateActiveNavOnScroll = () => {
     const scrollPosition = window.scrollY + 220;
