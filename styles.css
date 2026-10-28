@@ -353,7 +353,7 @@ body {
   font-weight: 500;
 }
 
-/* Fotografía Integrada al Lienzo: Background + Oscuridad Difuminada Orgánica + Imagen (Cero Recuadro) */
+/* Fotografía Integrada al Lienzo: Oscuridad Fuerte Anclada en la Esquina + Centro Limpio (Sin agujero en medio) */
 .hero-cinematic-backdrop {
   position: absolute;
   top: -36px;
@@ -369,32 +369,32 @@ body {
   background: transparent;
 }
 
-/* Capa intermedia ("Oscuridad difuminada" entre el background claro y la imagen, 100% elíptica sin esquinas rectas) */
+/* Oscuridad concentrada FUERTE en la esquina (inferior-derecha y borde derecho), dejando el centro libre */
 .hero-cinematic-backdrop::before {
   content: "";
   position: absolute;
-  inset: -24px -16px;
+  inset: -28px -24px;
   z-index: 0;
   background:
     radial-gradient(
-      closest-side at 54% 48%,
-      rgba(6, 7, 10, 0.95) 0%,
-      rgba(8, 9, 13, 0.86) 44%,
-      rgba(10, 11, 16, 0.54) 68%,
-      rgba(12, 14, 19, 0.18) 84%,
-      transparent 99%
+      closest-side at 82% 82%,
+      rgba(5, 6, 9, 0.98) 0%,
+      rgba(7, 8, 12, 0.92) 38%,
+      rgba(9, 10, 15, 0.62) 66%,
+      rgba(12, 14, 19, 0.20) 85%,
+      transparent 100%
     ),
     radial-gradient(
-      closest-side at 72% 74%,
-      rgba(6, 7, 10, 0.92) 0%,
-      rgba(8, 9, 13, 0.68) 46%,
-      rgba(10, 11, 16, 0.22) 76%,
-      transparent 98%
+      closest-side at 84% 26%,
+      rgba(6, 7, 10, 0.90) 0%,
+      rgba(8, 9, 13, 0.68) 42%,
+      rgba(10, 11, 16, 0.22) 75%,
+      transparent 100%
     );
-  filter: blur(14px);
+  filter: blur(16px);
 }
 
-/* Capa 1 de máscara: Elipse closest-side que garantiza alfa = 0 antes de tocar cualquier borde */
+/* Capa 1 de máscara: Amplia en el centro (no hace agujero) y desvanece suavemente antes de tocar los bordes */
 .hero-backdrop-radial-mask {
   position: absolute;
   inset: 0;
@@ -402,24 +402,22 @@ body {
   height: 100%;
   z-index: 1;
   -webkit-mask-image: radial-gradient(
-    closest-side at 52% 46%,
-    rgba(0, 0, 0, 1) 38%,
-    rgba(0, 0, 0, 0.85) 58%,
-    rgba(0, 0, 0, 0.45) 75%,
-    rgba(0, 0, 0, 0.12) 88%,
-    transparent 98%
+    closest-side at 54% 48%,
+    rgba(0, 0, 0, 1) 56%,
+    rgba(0, 0, 0, 0.88) 72%,
+    rgba(0, 0, 0, 0.45) 86%,
+    transparent 99%
   );
   mask-image: radial-gradient(
-    closest-side at 52% 46%,
-    rgba(0, 0, 0, 1) 38%,
-    rgba(0, 0, 0, 0.85) 58%,
-    rgba(0, 0, 0, 0.45) 75%,
-    rgba(0, 0, 0, 0.12) 88%,
-    transparent 98%
+    closest-side at 54% 48%,
+    rgba(0, 0, 0, 1) 56%,
+    rgba(0, 0, 0, 0.88) 72%,
+    rgba(0, 0, 0, 0.45) 86%,
+    transparent 99%
   );
 }
 
-/* Sombra radial interna en la esquina/derecha de la imagen para dar contraste profundo sobre el proyector y la esquina */
+/* Sombra fuerte en la esquina inferior-derecha y superior-derecha (nunca en el centro donde estás tú) */
 .hero-backdrop-radial-mask::after {
   content: "";
   position: absolute;
@@ -427,20 +425,21 @@ body {
   z-index: 2;
   background:
     radial-gradient(
-      closest-side at 76% 76%,
-      rgba(6, 7, 10, 0.88) 0%,
-      rgba(8, 9, 13, 0.56) 48%,
-      transparent 92%
+      circle at 92% 92%,
+      rgba(5, 6, 9, 0.96) 0%,
+      rgba(7, 8, 12, 0.84) 28%,
+      rgba(9, 10, 15, 0.44) 54%,
+      transparent 78%
     ),
     radial-gradient(
-      closest-side at 24% 52%,
-      rgba(8, 9, 13, 0.72) 0%,
-      rgba(8, 9, 13, 0.32) 52%,
-      transparent 94%
+      circle at 92% 16%,
+      rgba(6, 7, 10, 0.88) 0%,
+      rgba(8, 9, 13, 0.54) 32%,
+      transparent 66%
     );
 }
 
-/* Capa 2 de máscara: Desvanecido horizontal (izquierda hacia el texto y derecha suavizando el proyector) */
+/* Capa 2 de máscara: Desvanecido horizontal limpio de izquierda a derecha */
 .hero-backdrop-picture {
   position: absolute;
   inset: 0;
@@ -451,55 +450,51 @@ body {
   -webkit-mask-image: linear-gradient(
     to right,
     transparent 0%,
-    rgba(0, 0, 0, 0.08) 12%,
-    rgba(0, 0, 0, 0.45) 28%,
-    rgba(0, 0, 0, 0.90) 44%,
-    rgba(0, 0, 0, 1) 56%,
-    rgba(0, 0, 0, 0.68) 72%,
-    rgba(0, 0, 0, 0.20) 86%,
-    transparent 97%
+    rgba(0, 0, 0, 0.10) 10%,
+    rgba(0, 0, 0, 0.52) 24%,
+    rgba(0, 0, 0, 0.94) 38%,
+    rgba(0, 0, 0, 1) 70%,
+    rgba(0, 0, 0, 0.45) 88%,
+    transparent 99%
   );
   mask-image: linear-gradient(
     to right,
     transparent 0%,
-    rgba(0, 0, 0, 0.08) 12%,
-    rgba(0, 0, 0, 0.45) 28%,
-    rgba(0, 0, 0, 0.90) 44%,
-    rgba(0, 0, 0, 1) 56%,
-    rgba(0, 0, 0, 0.68) 72%,
-    rgba(0, 0, 0, 0.20) 86%,
-    transparent 97%
+    rgba(0, 0, 0, 0.10) 10%,
+    rgba(0, 0, 0, 0.52) 24%,
+    rgba(0, 0, 0, 0.94) 38%,
+    rgba(0, 0, 0, 1) 70%,
+    rgba(0, 0, 0, 0.45) 88%,
+    transparent 99%
   );
 }
 
-/* Capa 3 de máscara: Desvanecido vertical (techo superior y parte inferior hacia las tarjetas) */
+/* Capa 3 de máscara: Desvanecido vertical en borde superior e inferior */
 .hero-backdrop-picture img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: 46% 18%;
   display: block;
-  filter: saturate(0.58) contrast(1.08) brightness(0.84);
+  filter: saturate(0.62) contrast(1.08) brightness(0.88);
   -webkit-mask-image: linear-gradient(
     to bottom,
     transparent 0%,
-    rgba(0, 0, 0, 0.20) 10%,
-    rgba(0, 0, 0, 0.74) 24%,
-    rgba(0, 0, 0, 1) 38%,
-    rgba(0, 0, 0, 1) 65%,
-    rgba(0, 0, 0, 0.48) 80%,
-    rgba(0, 0, 0, 0.10) 92%,
+    rgba(0, 0, 0, 0.35) 8%,
+    rgba(0, 0, 0, 0.88) 18%,
+    rgba(0, 0, 0, 1) 30%,
+    rgba(0, 0, 0, 1) 72%,
+    rgba(0, 0, 0, 0.52) 86%,
     transparent 99%
   );
   mask-image: linear-gradient(
     to bottom,
     transparent 0%,
-    rgba(0, 0, 0, 0.20) 10%,
-    rgba(0, 0, 0, 0.74) 24%,
-    rgba(0, 0, 0, 1) 38%,
-    rgba(0, 0, 0, 1) 65%,
-    rgba(0, 0, 0, 0.48) 80%,
-    rgba(0, 0, 0, 0.10) 92%,
+    rgba(0, 0, 0, 0.35) 8%,
+    rgba(0, 0, 0, 0.88) 18%,
+    rgba(0, 0, 0, 1) 30%,
+    rgba(0, 0, 0, 1) 72%,
+    rgba(0, 0, 0, 0.52) 86%,
     transparent 99%
   );
 }
@@ -507,16 +502,15 @@ body {
 .hero-cinematic-caption {
   position: relative;
   z-index: 3;
-  padding: 14px 24px 10px 32px;
+  padding: 18px 24px 12px 42px;
   text-align: right;
   display: flex;
   flex-direction: column;
   gap: 2px;
-  /* Colchón oscuro difuminado exclusivamente bajo el texto de la esquina para máxima legibilidad */
   background: radial-gradient(
-    closest-side at 62% 58%,
-    rgba(6, 7, 10, 0.86) 0%,
-    rgba(6, 7, 10, 0.52) 55%,
+    closest-side at 72% 68%,
+    rgba(5, 6, 9, 0.95) 0%,
+    rgba(7, 8, 12, 0.72) 56%,
     transparent 100%
   );
 }
