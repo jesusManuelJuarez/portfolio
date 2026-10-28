@@ -353,22 +353,21 @@ body {
   font-weight: 500;
 }
 
-/* Fotografía Integrada al Lienzo: Cubre 100% hasta el borde superior y derecho de la pantalla (Cero background filtrado arriba/derecha) */
+/* Fotografía Integrada al Lienzo: Transición 2D Continua Foto -> Negro -> Background (Cero Líneas o Recuadros) */
 .hero-cinematic-backdrop {
   position: absolute;
-  /* Se extiende hasta el techo de la ventana (detrás del header) y hasta el borde derecho real del viewport (100vw) */
-  top: -155px;
-  right: calc((100vw - 100%) / -2);
-  bottom: -36px;
-  width: calc(65% + (100vw - 100%) / 2);
+  top: -110px;
+  right: -95px;
+  bottom: -95px;
+  width: 780px;
   margin: 0;
   z-index: 1;
   pointer-events: none;
   display: flex;
   align-items: flex-end;
   justify-content: flex-end;
-  padding-right: max(12px, calc((100vw - 100%) / 2));
-  padding-bottom: 24px;
+  padding-right: 95px;
+  padding-bottom: 85px;
   background: transparent;
 }
 
@@ -376,111 +375,55 @@ body {
   display: none;
 }
 
-/* Capa 1 (Detrás de la foto, z-index: 1):
-   Oscuridad profunda en la esquina superior-derecha, derecha e inferior-derecha que tapa el background verde/azul sin formar ningún rectángulo y NUNCA tapa la foto. */
+/* Halo Negro de Transición hacia el Background:
+   Usa closest-side centrado en una caja sobredimensionada para que en los 4 lados llegue matemáticamente a transparent (0%) antes del borde y NUNCA forme líneas rectas. */
 .hero-backdrop-radial-mask {
   position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
+  top: -160px;
+  bottom: -180px;
+  left: -140px;
+  right: -240px;
   z-index: 1;
-  background:
-    radial-gradient(
-      ellipse 95% 95% at 100% 0%,
-      #080A0F 0%,
-      #0A0C12 52%,
-      rgba(10, 12, 18, 0.72) 74%,
-      rgba(12, 14, 20, 0.22) 88%,
-      transparent 99%
-    ),
-    radial-gradient(
-      ellipse 85% 75% at 96% 92%,
-      #080A0F 0%,
-      rgba(9, 11, 16, 0.90) 44%,
-      rgba(11, 13, 19, 0.35) 75%,
-      transparent 98%
-    );
+  background: radial-gradient(
+    closest-side at 54% 46%,
+    #080A0F 0%,
+    rgba(8, 10, 15, 0.92) 34%,
+    rgba(8, 10, 15, 0.54) 60%,
+    rgba(8, 10, 15, 0.16) 82%,
+    transparent 100%
+  );
 }
 
 .hero-backdrop-radial-mask::after {
   display: none;
 }
 
-/* Capa 2 (Encima de la capa oscura, z-index: 2):
-   Fotografía 100% nítida y visible en toda el área central donde apareces, desvaneciendo únicamente sus bordes exteriores hacia la oscuridad de atrás. */
+/* Fotografía con transición 2D Foto -> Negro (#080A0F) -> Transparente ya integrada en los 4 lados (Cero recortes CSS rectos) */
 .hero-backdrop-picture {
   position: absolute;
-  top: 86px;
-  bottom: 0;
-  left: 8%;
-  right: max(0px, calc((100vw - 100%) / 2 - 40px));
+  inset: 0;
+  width: 100%;
+  height: 100%;
   display: block;
   z-index: 2;
-  -webkit-mask-image: linear-gradient(
-    to right,
-    transparent 0%,
-    rgba(0, 0, 0, 0.32) 10%,
-    rgba(0, 0, 0, 0.85) 22%,
-    rgba(0, 0, 0, 1) 32%,
-    rgba(0, 0, 0, 1) 82%,
-    rgba(0, 0, 0, 0.45) 93%,
-    transparent 100%
-  );
-  mask-image: linear-gradient(
-    to right,
-    transparent 0%,
-    rgba(0, 0, 0, 0.32) 10%,
-    rgba(0, 0, 0, 0.85) 22%,
-    rgba(0, 0, 0, 1) 32%,
-    rgba(0, 0, 0, 1) 82%,
-    rgba(0, 0, 0, 0.45) 93%,
-    transparent 100%
-  );
 }
 
 .hero-backdrop-picture img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  object-position: 46% 16%;
+  object-fit: contain;
+  object-position: right center;
   display: block;
-  filter: saturate(0.92) contrast(1.05) brightness(1.0);
-  -webkit-mask-image: linear-gradient(
-    to bottom,
-    transparent 0%,
-    rgba(0, 0, 0, 0.48) 7%,
-    rgba(0, 0, 0, 0.94) 15%,
-    rgba(0, 0, 0, 1) 24%,
-    rgba(0, 0, 0, 1) 80%,
-    rgba(0, 0, 0, 0.48) 91%,
-    transparent 100%
-  );
-  mask-image: linear-gradient(
-    to bottom,
-    transparent 0%,
-    rgba(0, 0, 0, 0.48) 7%,
-    rgba(0, 0, 0, 0.94) 15%,
-    rgba(0, 0, 0, 1) 24%,
-    rgba(0, 0, 0, 1) 80%,
-    rgba(0, 0, 0, 0.48) 91%,
-    transparent 100%
-  );
 }
 
 .hero-cinematic-caption {
   position: relative;
   z-index: 3;
-  padding: 16px 14px 10px 38px;
+  padding: 12px 6px 6px 28px;
   text-align: right;
   display: flex;
   flex-direction: column;
   gap: 2px;
-  background: radial-gradient(
-    closest-side at 68% 62%,
-    rgba(7, 8, 12, 0.88) 0%,
-    rgba(7, 8, 12, 0.48) 58%,
-    transparent 100%
-  );
 }
 
 .hero-caption-title {
