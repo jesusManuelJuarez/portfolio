@@ -225,20 +225,22 @@
           <meta itemprop="name" content="Presentación de proyectos integradores — Universidad Politécnica de Chiapas, Suchiapa, Chiapas">
           <link itemprop="url" href="https://me.konektaa.lat/assets/jesus-manuel-juarez-acosta-conferencia.jpg">
           <link itemprop="contentUrl" href="https://me.konektaa.lat/assets/jesus-manuel-juarez-acosta-conferencia.jpg">
-          <div class="hero-backdrop-radial-mask">
-            <picture class="hero-backdrop-picture">
-              <source srcset="assets/mi.webp" type="image/webp">
-              <img
-                src="assets/jesus-manuel-juarez-acosta-conferencia.jpg"
-                alt="Jesús Manuel Juárez Acosta en presentación de proyectos integradores en la Universidad Politécnica de Chiapas, Suchiapa, Chiapas"
-                title="Presentación de proyectos integradores — Universidad Politécnica de Chiapas, Suchiapa, Chiapas"
-                width="960"
-                height="1280"
-                loading="eager"
-                fetchpriority="high"
-              >
-            </picture>
-          </div>
+          <!-- Capa 1 (Detrás): Oscuridad difuminada en la esquina derecha/superior que tapa el fondo verde sin crear recuadro -->
+          <div class="hero-backdrop-radial-mask" aria-hidden="true"></div>
+
+          <!-- Capa 2 (Encima, 100% nítida): Fotografía con bordes desvanecidos sobre la capa oscura -->
+          <picture class="hero-backdrop-picture">
+            <source srcset="assets/mi.webp" type="image/webp">
+            <img
+              src="assets/jesus-manuel-juarez-acosta-conferencia.jpg"
+              alt="Jesús Manuel Juárez Acosta en presentación de proyectos integradores en la Universidad Politécnica de Chiapas, Suchiapa, Chiapas"
+              title="Presentación de proyectos integradores — Universidad Politécnica de Chiapas, Suchiapa, Chiapas"
+              width="960"
+              height="1280"
+              loading="eager"
+              fetchpriority="high"
+            >
+          </picture>
           <figcaption class="hero-cinematic-caption" itemprop="caption">
             <span class="hero-caption-title">Presentación de proyectos integradores</span>
             <span class="hero-caption-sub" itemprop="alumniOf">Universidad Politécnica de Chiapas · Suchiapa, Chiapas</span>
