@@ -353,52 +353,24 @@ body {
   font-weight: 500;
 }
 
-/* Fotografía Integrada al Lienzo: Transición 2D Continua Foto -> Negro -> Background (Cero Líneas o Recuadros) */
+/* Fotografía Integrada al Lienzo: Plano Medio Editorial sin Anillo Negro ni Recuadros */
 .hero-cinematic-backdrop {
   position: absolute;
-  top: -110px;
-  right: -95px;
-  bottom: -95px;
-  width: 780px;
+  top: -64px;
+  right: -36px;
+  bottom: -44px;
+  width: 660px;
   margin: 0;
   z-index: 1;
   pointer-events: none;
   display: flex;
   align-items: flex-end;
   justify-content: flex-end;
-  padding-right: 95px;
-  padding-bottom: 85px;
+  padding-right: 40px;
+  padding-bottom: 36px;
   background: transparent;
 }
 
-.hero-cinematic-backdrop::before {
-  display: none;
-}
-
-/* Halo Negro de Transición hacia el Background:
-   Usa closest-side centrado en una caja sobredimensionada para que en los 4 lados llegue matemáticamente a transparent (0%) antes del borde y NUNCA forme líneas rectas. */
-.hero-backdrop-radial-mask {
-  position: absolute;
-  top: -160px;
-  bottom: -180px;
-  left: -140px;
-  right: -240px;
-  z-index: 1;
-  background: radial-gradient(
-    closest-side at 54% 46%,
-    #080A0F 0%,
-    rgba(8, 10, 15, 0.92) 34%,
-    rgba(8, 10, 15, 0.54) 60%,
-    rgba(8, 10, 15, 0.16) 82%,
-    transparent 100%
-  );
-}
-
-.hero-backdrop-radial-mask::after {
-  display: none;
-}
-
-/* Fotografía con transición 2D Foto -> Negro (#080A0F) -> Transparente ya integrada en los 4 lados (Cero recortes CSS rectos) */
 .hero-backdrop-picture {
   position: absolute;
   inset: 0;
@@ -419,7 +391,7 @@ body {
 .hero-cinematic-caption {
   position: relative;
   z-index: 3;
-  padding: 12px 6px 6px 28px;
+  padding: 8px 4px;
   text-align: right;
   display: flex;
   flex-direction: column;
