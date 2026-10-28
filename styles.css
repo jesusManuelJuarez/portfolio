@@ -269,60 +269,43 @@ body {
 }
 
 /* ==========================================================================
-   3. HERO EDITORIAL ASIMÉTRICO (SUELTO SOBRE EL LIENZO + RETRATO INTEGRADO)
+   3. HERO CINEMÁTICO (INTEGRACIÓN ESTILO NETFLIX SIN RECUADRO)
    ========================================================================== */
-.hero-split-canvas {
-  display: grid;
-  grid-template-columns: 1.25fr 0.75fr;
-  gap: 44px;
+.hero-cinematic-stage {
+  position: relative;
+  min-height: 460px;
+  display: flex;
   align-items: center;
-  padding: 16px 4px 8px;
+  padding: 28px 4px 24px;
+  overflow: visible;
 }
 
 .hero-editorial-left {
+  position: relative;
+  z-index: 3;
+  max-width: 650px;
   display: flex;
   flex-direction: column;
-  gap: 24px;
-}
-
-.hero-konekta-eyebrow {
-  display: inline-flex;
-  align-items: center;
-  gap: 12px;
-  color: #EAE5DE;
-  font-family: var(--font-display);
-  font-size: 0.86rem;
-  font-weight: 600;
-}
-
-.hero-konekta-eyebrow img {
-  width: 22px;
-  height: 22px;
-  object-fit: contain;
-}
-
-.hero-eyebrow-divider {
-  width: 1px;
-  height: 16px;
-  background: rgba(255, 255, 255, 0.22);
+  gap: 22px;
 }
 
 .bento-hero-headline {
   font-family: var(--font-display);
-  font-size: clamp(2.4rem, 4.6vw, 3.85rem);
-  line-height: 1.06;
+  font-size: clamp(2.45rem, 4.7vw, 3.95rem);
+  line-height: 1.05;
   letter-spacing: -0.035em;
   color: #FFFFFF;
   margin: 0;
+  text-shadow: 0 12px 34px rgba(0, 0, 0, 0.65);
 }
 
 .bento-hero-headline .light {
   font-weight: 400;
   color: #EAE5DE;
-  opacity: 0.88;
+  opacity: 0.90;
   display: block;
-  font-size: clamp(1.2rem, 2.1vw, 1.6rem);
-  margin-bottom: 10px;
+  font-size: clamp(1.18rem, 2vw, 1.52rem);
+  margin-bottom: 12px;
   letter-spacing: -0.015em;
 }
 
@@ -335,76 +318,119 @@ body {
 .bento-hero-subtitle {
   font-size: 1.02rem;
   font-weight: 400;
-  color: var(--text-muted);
+  color: rgba(255, 255, 255, 0.78);
   line-height: 1.68;
-  max-width: 640px;
+  max-width: 580px;
+  text-shadow: 0 4px 18px rgba(0, 0, 0, 0.75);
 }
 
-.hero-actions-bar {
+.hero-meta-strip {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 12px;
-  padding-top: 6px;
+  gap: 20px;
+  padding-top: 8px;
 }
 
-/* Retrato Escultórico en el Hero */
-.hero-portrait-card {
-  position: relative;
-  border-radius: 26px;
-  overflow: hidden;
-  background: #111218;
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  box-shadow: 0 32px 70px -12px rgba(0, 0, 0, 0.85), inset 0 1px 0 rgba(255, 255, 255, 0.18);
-  aspect-ratio: 4 / 4.4;
-  max-height: 440px;
-  width: 100%;
-  margin: 0;
+.hero-context-note {
   display: flex;
   flex-direction: column;
+  gap: 2px;
+  padding-left: 18px;
+  border-left: 1px solid rgba(255, 255, 255, 0.16);
+}
+
+.hero-context-primary {
+  font-family: var(--font-display);
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #EAE5DE;
+}
+
+.hero-context-secondary {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+/* Fotografía Integrada al Lienzo con Desvanecido Continuo Estilo Netflix (Cero Recuadro) */
+.hero-cinematic-backdrop {
+  position: absolute;
+  top: -18px;
+  right: -12px;
+  bottom: -18px;
+  width: 62%;
+  margin: 0;
+  z-index: 1;
+  pointer-events: none;
+  display: flex;
+  align-items: flex-end;
   justify-content: flex-end;
 }
 
-.hero-portrait-card img {
+.hero-backdrop-picture {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  object-position: center 18%;
   display: block;
-  transition: transform 0.55s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.hero-portrait-card:hover img {
-  transform: scale(1.03);
-}
-
-.hero-portrait-caption {
-  position: relative;
-  z-index: 2;
-  padding: 44px 22px 18px;
-  background: linear-gradient(
-    to top,
-    rgba(11, 12, 16, 0.96) 0%,
-    rgba(11, 12, 16, 0.72) 60%,
-    transparent 100%
+  /* Máscara elíptica suave para eliminar cualquier borde recto en los 4 lados */
+  -webkit-mask-image: radial-gradient(
+    ellipse 86% 84% at 62% 45%,
+    rgba(0, 0, 0, 1) 28%,
+    rgba(0, 0, 0, 0.78) 54%,
+    rgba(0, 0, 0, 0.28) 76%,
+    transparent 96%
   );
+  mask-image: radial-gradient(
+    ellipse 86% 84% at 62% 45%,
+    rgba(0, 0, 0, 1) 28%,
+    rgba(0, 0, 0, 0.78) 54%,
+    rgba(0, 0, 0, 0.28) 76%,
+    transparent 96%
+  );
+}
+
+.hero-backdrop-picture img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 56% 18%;
+  display: block;
+  filter: contrast(1.04) saturate(0.88) brightness(0.86);
+}
+
+/* Degradados Atmosféricos Multicapa para Fundir con #0E1015 */
+.hero-backdrop-vignette {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, #0E1015 0%, rgba(14, 16, 21, 0.88) 22%, rgba(14, 16, 21, 0.28) 55%, rgba(14, 16, 21, 0.08) 78%, #0E1015 100%),
+    linear-gradient(0deg, #0E1015 0%, rgba(14, 16, 21, 0.72) 18%, transparent 52%, rgba(14, 16, 21, 0.55) 90%, #0E1015 100%);
+  z-index: 2;
+}
+
+.hero-cinematic-caption {
+  position: relative;
+  z-index: 3;
+  padding: 0 18px 14px 0;
+  text-align: right;
   display: flex;
   flex-direction: column;
-  gap: 3px;
+  gap: 2px;
 }
 
 .hero-caption-title {
   font-family: var(--font-display);
-  font-size: 0.90rem;
-  font-weight: 800;
-  color: #FFFFFF;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: rgba(234, 229, 222, 0.88);
+  letter-spacing: -0.01em;
 }
 
 .hero-caption-sub {
-  font-size: 0.76rem;
-  color: rgba(255, 255, 255, 0.74);
+  font-size: 0.72rem;
+  color: rgba(166, 155, 151, 0.82);
   font-weight: 500;
 }
 
@@ -501,21 +527,65 @@ body {
   gap: 20px;
 }
 
-/* Diagrama Visual de Arquitectura en la Sección de Ingeniería */
-.arch-diagram-stage {
-  background: #11131A;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: var(--radius-module);
-  padding: 20px 18px;
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
+/* Flujo de Arquitectura Monocromático Satin Bento (Sin puntos de colores genéricos) */
+.arch-flow-pipeline {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-top: 8px;
 }
 
-.arch-diagram-svg {
-  width: 100%;
-  height: auto;
-  display: block;
+.arch-flow-node {
+  background: #12141B;
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  border-radius: 16px;
+  padding: 14px 13px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  transition: var(--transition-smooth);
+}
+
+.arch-flow-node:hover {
+  border-color: rgba(234, 229, 222, 0.28);
+  background: #161821;
+  transform: translateY(-2px);
+}
+
+.arch-node-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.arch-node-step {
+  font-family: var(--font-display);
+  font-size: 0.72rem;
+  font-weight: 800;
+  color: #EAE5DE;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: rgba(234, 229, 222, 0.08);
+  border: 1px solid rgba(234, 229, 222, 0.16);
+}
+
+.arch-node-arrow {
+  color: rgba(234, 229, 222, 0.45);
+}
+
+.arch-node-title {
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: #FFFFFF;
+  letter-spacing: -0.01em;
+}
+
+.arch-node-meta {
+  font-size: 0.74rem;
+  color: var(--text-muted);
+  line-height: 1.48;
 }
 
 /* Lockup del Símbolo de Konekta en Tarjeta de Ecosistema */
@@ -1022,14 +1092,25 @@ body {
    8. RESPONSIVE BREAKPOINTS
    ========================================================================== */
 @media (max-width: 1120px) {
-  .hero-split-canvas,
   .software-bento-grid,
   .cv-bento-grid {
     grid-template-columns: 1fr;
   }
-  .hero-portrait-card {
-    max-width: 460px;
+  .hero-cinematic-stage {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    min-height: auto;
+    gap: 16px;
   }
+  .hero-cinematic-backdrop {
+    position: relative;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 360px;
+  }
+  .arch-flow-pipeline,
   .grid-3-columns,
   .grid-4-columns {
     grid-template-columns: repeat(2, 1fr);
@@ -1053,9 +1134,14 @@ body {
     padding: 0 14px;
     font-size: 0.78rem;
   }
+  .arch-flow-pipeline,
   .grid-3-columns,
   .grid-4-columns {
     grid-template-columns: 1fr;
+  }
+  .hero-context-note {
+    padding-left: 0;
+    border-left: none;
   }
   .modal-crear-card-full {
     padding: 20px;
