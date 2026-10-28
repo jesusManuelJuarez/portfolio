@@ -4,7 +4,8 @@
 
 ## Identidad y Resumen Profesional
 - **Nombre completo**: Jesús Manuel Juárez Acosta (también indexado como Jesus Manuel Juarez Acosta / `@jesusManuelJuarez`).
-- **Profesión**: Ingeniero en Software (Desarrollo Web Full-Stack, Sistemas con Inteligencia Artificial y Aplicaciones Móviles).
+- **Profesión**: Ingeniero en Software (Desarrollo Web Full-Stack, Automatizaciones y Sistemas con Inteligencia Artificial, y Aplicaciones Móviles).
+- **Colaboraciones Internacionales**: Desarrollo de automatizaciones, flujos multi-agente con IA y plataformas web para **MultiMoney (México)** y **NovaInsure (Estados Unidos)**.
 - **Educación**: Ingeniería en Software — Universidad Politécnica de Chiapas, Suchiapa, Chiapas (2019 – 2023).
 - **Ubicación**: Chiapas, México (Modalidad Remota).
 - **Sitio Web Oficial / Portafolio**: https://me.konektaa.lat/
