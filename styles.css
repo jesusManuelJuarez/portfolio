@@ -1,6 +1,6 @@
 /* ==========================================================================
    VORTEX V2 DESIGN SYSTEM — PORTFOLIO EDITION (SATIN BENTO + AMBIENT LENS)
-   Superficies Satinadas Opacas, Alto Contraste, Cero Ruido Visual
+   Composición Editorial Desencajada, Superficies Satinadas Opacas, Cero Ruido
    ========================================================================== */
 
 :root {
@@ -13,22 +13,21 @@
   --bg-surface: #15171F;
   --bg-stage: #111218;
 
-  /* Tarjeta Modal & Módulos (100% Sólidos para evitar contaminación del fondo) */
-  --card-bg: #1A1C24;
-  --card-kanban-bg: #1B1D25;
-  --card-border: 1px solid rgba(255, 255, 255, 0.12);
+  /* Tarjetas Sólidas Satinadas (100% Opacas para contraste limpio sobre el fondo) */
+  --card-bg: #181A22;
+  --card-kanban-bg: #1A1C24;
+  --card-border: 1px solid rgba(255, 255, 255, 0.11);
   --card-border-hover: rgba(255, 255, 255, 0.24);
-  --card-shadow: 0 32px 80px -15px rgba(0, 0, 0, 0.85), inset 0 1px 0 rgba(255, 255, 255, 0.14);
-  --card-item-shadow: 0 10px 30px rgba(0, 0, 0, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  --card-shadow: 0 28px 70px -15px rgba(0, 0, 0, 0.8), inset 0 1px 0 rgba(255, 255, 255, 0.12);
+  --card-item-shadow: 0 14px 34px rgba(0, 0, 0, 0.48), inset 0 1px 0 rgba(255, 255, 255, 0.09);
 
-  /* Módulos Internos & Inputs */
+  /* Módulos Internos */
   --input-box-bg: rgba(255, 255, 255, 0.04);
-  --input-box-border: 1px solid rgba(255, 255, 255, 0.10);
-  --input-box-focus: 1px solid rgba(255, 255, 255, 0.28);
+  --input-box-border: 1px solid rgba(255, 255, 255, 0.09);
 
   /* Textos Canónicos */
   --text-main: #FFFFFF;
-  --text-muted: #A89893;
+  --text-muted: #A69B97;
   --text-subtle: #727682;
 
   /* Botón Principal (Marfil Satinado) */
@@ -44,11 +43,11 @@
 
   /* Radios Canónicos Vortex V2 */
   --radius-modal: 28px;
-  --radius-card: 20px;
-  --radius-module: 14px;
+  --radius-card: 22px;
+  --radius-module: 16px;
   --radius-pill: 9999px;
 
-  --transition-smooth: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-smooth: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 * {
@@ -65,7 +64,7 @@ html {
 
 body {
   background-color: var(--bg-canvas);
-  background-image: radial-gradient(circle at 50% 0%, rgba(56, 189, 248, 0.05) 0%, transparent 60%);
+  background-image: radial-gradient(circle at 50% 0%, rgba(56, 189, 248, 0.06) 0%, transparent 60%);
   font-family: var(--font-body);
   color: var(--text-main);
   min-height: 100vh;
@@ -130,10 +129,10 @@ body {
 /* Contenedor Maestro */
 .app-wrapper {
   width: 100%;
-  max-width: 1320px;
+  max-width: 1280px;
   display: flex;
   flex-direction: column;
-  gap: 56px;
+  gap: 68px;
   position: relative;
   z-index: 1;
 }
@@ -170,12 +169,13 @@ body {
   flex-wrap: wrap;
 }
 
-/* Píldora de Usuario Individual (.bento-avatar-pill de Vortex V2) */
+/* Píldora de Marca / Identidad Suelta (Símbolo de Konekta sin círculo extra) */
 .bento-avatar-pill {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  padding: 5px 16px 5px 5px;
+  height: 42px;
+  padding: 0 18px 0 14px;
   border-radius: var(--radius-pill);
   background: rgba(22, 24, 32, 0.92);
   border: 1px solid rgba(255, 255, 255, 0.12);
@@ -192,21 +192,9 @@ body {
   transform: translateY(-1px);
 }
 
-.bento-brand-mark {
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.14);
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-}
-
 .bento-konekta-symbol {
-  width: 19px;
-  height: 19px;
+  width: 20px;
+  height: 20px;
   object-fit: contain;
   display: block;
 }
@@ -281,7 +269,147 @@ body {
 }
 
 /* ==========================================================================
-   3. CABECERAS DE SECCIÓN & TIPOGRAFÍA CANÓNICA
+   3. HERO EDITORIAL ASIMÉTRICO (SUELTO SOBRE EL LIENZO + RETRATO INTEGRADO)
+   ========================================================================== */
+.hero-split-canvas {
+  display: grid;
+  grid-template-columns: 1.25fr 0.75fr;
+  gap: 44px;
+  align-items: center;
+  padding: 16px 4px 8px;
+}
+
+.hero-editorial-left {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.hero-konekta-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  color: #EAE5DE;
+  font-family: var(--font-display);
+  font-size: 0.86rem;
+  font-weight: 600;
+}
+
+.hero-konekta-eyebrow img {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+}
+
+.hero-eyebrow-divider {
+  width: 1px;
+  height: 16px;
+  background: rgba(255, 255, 255, 0.22);
+}
+
+.bento-hero-headline {
+  font-family: var(--font-display);
+  font-size: clamp(2.4rem, 4.6vw, 3.85rem);
+  line-height: 1.06;
+  letter-spacing: -0.035em;
+  color: #FFFFFF;
+  margin: 0;
+}
+
+.bento-hero-headline .light {
+  font-weight: 400;
+  color: #EAE5DE;
+  opacity: 0.88;
+  display: block;
+  font-size: clamp(1.2rem, 2.1vw, 1.6rem);
+  margin-bottom: 10px;
+  letter-spacing: -0.015em;
+}
+
+.bento-hero-headline .bold {
+  font-weight: 800;
+  color: #FFFFFF;
+  display: block;
+}
+
+.bento-hero-subtitle {
+  font-size: 1.02rem;
+  font-weight: 400;
+  color: var(--text-muted);
+  line-height: 1.68;
+  max-width: 640px;
+}
+
+.hero-actions-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  padding-top: 6px;
+}
+
+/* Retrato Escultórico en el Hero */
+.hero-portrait-card {
+  position: relative;
+  border-radius: 26px;
+  overflow: hidden;
+  background: #111218;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 32px 70px -12px rgba(0, 0, 0, 0.85), inset 0 1px 0 rgba(255, 255, 255, 0.18);
+  aspect-ratio: 4 / 4.4;
+  max-height: 440px;
+  width: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.hero-portrait-card img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 18%;
+  display: block;
+  transition: transform 0.55s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hero-portrait-card:hover img {
+  transform: scale(1.03);
+}
+
+.hero-portrait-caption {
+  position: relative;
+  z-index: 2;
+  padding: 44px 22px 18px;
+  background: linear-gradient(
+    to top,
+    rgba(11, 12, 16, 0.96) 0%,
+    rgba(11, 12, 16, 0.72) 60%,
+    transparent 100%
+  );
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.hero-caption-title {
+  font-family: var(--font-display);
+  font-size: 0.90rem;
+  font-weight: 800;
+  color: #FFFFFF;
+}
+
+.hero-caption-sub {
+  font-size: 0.76rem;
+  color: rgba(255, 255, 255, 0.74);
+  font-weight: 500;
+}
+
+/* ==========================================================================
+   4. CABECERAS DE SECCIÓN & TIPOGRAFÍA CANÓNICA
    ========================================================================== */
 .header-section {
   padding: 8px 4px 18px;
@@ -306,39 +434,6 @@ body {
   font-size: 0.88rem;
   color: var(--text-muted);
   line-height: 1.45;
-}
-
-/* Encabezado Editorial Hero (Two-Weight Headline) */
-.bento-hero-headline {
-  font-family: var(--font-display);
-  font-size: clamp(2.1rem, 4.2vw, 3.3rem);
-  line-height: 1.1;
-  letter-spacing: -0.035em;
-  color: #FFFFFF;
-  margin: 0;
-}
-
-.bento-hero-headline .light {
-  font-weight: 400;
-  opacity: 0.82;
-  color: #EAE5DE;
-  display: block;
-  font-size: clamp(1.15rem, 2vw, 1.55rem);
-  margin-bottom: 6px;
-  letter-spacing: -0.015em;
-}
-
-.bento-hero-headline .bold {
-  font-weight: 800;
-  color: #FFFFFF;
-}
-
-.bento-hero-subtitle {
-  font-size: 0.96rem;
-  font-weight: 400;
-  color: var(--text-muted);
-  line-height: 1.65;
-  max-width: 680px;
 }
 
 .typo-modal-title {
@@ -372,93 +467,32 @@ body {
 }
 
 /* ==========================================================================
-   4. SISTEMAS DE GRIDS (3 COLUMNAS & CV SPLIT)
+   5. SISTEMAS DE GRIDS BENTO (SIN CONTENEDORES REDUNDANTES)
    ========================================================================== */
 .grid-3-columns {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 22px;
+  gap: 20px;
+}
+
+.grid-4-columns {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.software-bento-grid {
+  display: grid;
+  grid-template-columns: 1.35fr 1fr;
+  gap: 20px;
+  align-items: stretch;
 }
 
 .cv-bento-grid {
   display: grid;
-  grid-template-columns: 370px 1fr;
-  gap: 26px;
+  grid-template-columns: 360px 1fr;
+  gap: 24px;
   align-items: start;
-}
-
-/* Grid de Presentación Personal & Fotografía Editorial (Sobre Mí) */
-.presentation-bento-grid {
-  display: grid;
-  grid-template-columns: 380px 1fr;
-  gap: 26px;
-  align-items: stretch;
-}
-
-.speaker-portrait-card {
-  background: var(--bg-stage);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  border-radius: var(--radius-card);
-  padding: 14px;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  box-shadow: var(--card-item-shadow);
-}
-
-.speaker-figure {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  min-height: 390px;
-  border-radius: var(--radius-module);
-  overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.10);
-  background: #0B0C10;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-}
-
-.speaker-figure img {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center 20%;
-  display: block;
-  transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.speaker-portrait-card:hover .speaker-figure img {
-  transform: scale(1.02);
-}
-
-.speaker-figure-overlay {
-  position: relative;
-  z-index: 2;
-  padding: 36px 18px 16px;
-  background: linear-gradient(to top, rgba(14, 16, 21, 0.96) 0%, rgba(14, 16, 21, 0.72) 65%, transparent 100%);
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-}
-
-.speaker-caption-title {
-  font-family: var(--font-display);
-  font-size: 0.92rem;
-  font-weight: 800;
-  color: #FFFFFF;
-  line-height: 1.3;
-}
-
-.speaker-figcaption {
-  font-size: 0.78rem;
-  color: rgba(255, 255, 255, 0.78);
-  line-height: 1.4;
-  font-weight: 500;
 }
 
 .column-block {
@@ -467,27 +501,45 @@ body {
   gap: 20px;
 }
 
-.column-header {
+/* Diagrama Visual de Arquitectura en la Sección de Ingeniería */
+.arch-diagram-stage {
+  background: #11131A;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-module);
+  padding: 20px 18px;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding-bottom: 10px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  flex-direction: column;
+  gap: 14px;
 }
 
-.column-title {
-  font-family: var(--font-display);
-  font-size: 0.96rem;
-  font-weight: 800;
-  color: #FFFFFF;
-  letter-spacing: -0.01em;
+.arch-diagram-svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Lockup del Símbolo de Konekta en Tarjeta de Ecosistema */
+.konekta-ecosystem-header {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 14px;
+}
+
+.konekta-symbol-free-light {
+  width: 38px;
+  height: 38px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.konekta-divider-vertical {
+  width: 1px;
+  height: 28px;
+  background: rgba(255, 255, 255, 0.16);
 }
 
 /* ==========================================================================
-   5. TARJETAS Y CONTENEDORES SÓLIDOS SATINADOS
+   6. TARJETAS SATINADAS SÓLIDAS (VORTEX V2)
    ========================================================================== */
 .modal-crear-card-full {
   background: var(--card-bg);
@@ -504,7 +556,7 @@ body {
   background: var(--card-bg);
   border: var(--card-border);
   border-radius: var(--radius-card);
-  padding: 20px;
+  padding: 22px;
   display: flex;
   flex-direction: column;
   gap: 14px;
@@ -525,7 +577,7 @@ body {
 
 .ui-item-label {
   font-family: var(--font-display);
-  font-size: 0.90rem;
+  font-size: 0.94rem;
   font-weight: 800;
   color: #FFFFFF;
   display: flex;
@@ -604,20 +656,19 @@ body {
 }
 
 /* ==========================================================================
-   6. BOTONES, CÁPSULAS, SWITCHERS Y COMPONENTES ATÓMICOS VORTEX V2
+   7. BOTONES, CÁPSULAS, SWITCHERS Y COMPONENTES ATÓMICOS
    ========================================================================== */
 
-/* Botón Insignia (Marfil Satinado + Chevron Bubble) */
 .btn-estructurar-ia {
-  height: 42px;
-  padding: 0 8px 0 18px;
+  height: 44px;
+  padding: 0 10px 0 20px;
   border-radius: var(--radius-pill);
   background: var(--pill-light-bg);
   color: var(--pill-light-text);
   border: none;
   font-family: var(--font-display);
   font-weight: 800;
-  font-size: 0.84rem;
+  font-size: 0.85rem;
   display: inline-flex;
   align-items: center;
   gap: 12px;
@@ -667,10 +718,9 @@ body {
   color: #121316;
 }
 
-/* Botón Compacto para Links de Tarjetas */
 .btn-card-action {
-  height: 34px;
-  padding: 0 14px;
+  height: 36px;
+  padding: 0 15px;
   border-radius: var(--radius-pill);
   background: rgba(255, 255, 255, 0.06);
   border: 1px solid rgba(255, 255, 255, 0.12);
@@ -704,7 +754,7 @@ body {
   background: #FFFFFF;
 }
 
-/* Cápsulas de Periodo / Fecha (Uso exclusivo donde aportan información real) */
+/* Cápsulas de Periodo / Fecha */
 .bento-capsule-apple {
   display: inline-flex;
   align-items: center;
@@ -753,7 +803,6 @@ body {
   white-space: nowrap;
 }
 
-/* Metadatos y Tags de Tecnologías (Sin ALL CAPS) */
 .bento-date-badge {
   display: inline-flex;
   align-items: center;
@@ -880,7 +929,7 @@ body {
 .experience-task-list {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 10px;
   margin-top: 4px;
 }
 
@@ -888,9 +937,9 @@ body {
   display: flex;
   align-items: flex-start;
   gap: 10px;
-  font-size: 0.84rem;
+  font-size: 0.85rem;
   color: var(--text-muted);
-  line-height: 1.55;
+  line-height: 1.58;
 }
 
 .experience-task-item strong {
@@ -910,7 +959,7 @@ body {
   justify-content: center;
   font-size: 10px;
   flex-shrink: 0;
-  margin-top: 2px;
+  margin-top: 3px;
 }
 
 /* Caja Interactiva de Contacto */
@@ -957,7 +1006,7 @@ body {
 
 /* Footer */
 .vortex-footer {
-  margin-top: 24px;
+  margin-top: 16px;
   padding-top: 24px;
   border-top: 1px solid rgba(255, 255, 255, 0.08);
   display: flex;
@@ -970,18 +1019,20 @@ body {
 }
 
 /* ==========================================================================
-   7. RESPONSIVE BREAKPOINTS
+   8. RESPONSIVE BREAKPOINTS
    ========================================================================== */
 @media (max-width: 1120px) {
-  .grid-3-columns {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .cv-bento-grid,
-  .presentation-bento-grid {
+  .hero-split-canvas,
+  .software-bento-grid,
+  .cv-bento-grid {
     grid-template-columns: 1fr;
   }
-  .speaker-figure {
-    min-height: 360px;
+  .hero-portrait-card {
+    max-width: 460px;
+  }
+  .grid-3-columns,
+  .grid-4-columns {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -1002,7 +1053,8 @@ body {
     padding: 0 14px;
     font-size: 0.78rem;
   }
-  .grid-3-columns {
+  .grid-3-columns,
+  .grid-4-columns {
     grid-template-columns: 1fr;
   }
   .modal-crear-card-full {
